@@ -1,0 +1,126 @@
+@charset "utf-8";
+html,body,div,form,label,input,a,h1,img,button,span{
+    margin:0;
+    padding:0;
+}
+input{
+    outline:none;
+}
+body{
+    width:100%;
+    background:#e6e6e6;
+    position:relative;
+}
+body>div{
+    width:100%;
+}
+#box{
+    width:602px;
+    height:912px;
+    margin-top:90px;
+    background:#fff;
+    position:absolute;
+    left:50%;
+    margin-left:-301px;
+    
+}
+#box .head{
+    width:100%;
+    height:55px;
+    position:relative;
+}
+.head .close{
+    cursor:pointer;
+    width:24px;
+    height:24px;
+    position:absolute;
+    right:31px;
+    bottom:0;
+}
+
+#box .center{
+    width:480px;
+    position:absolute;
+    left:50%;
+    margin-left:-240px;
+}
+.center .tit h1{
+    font-size:40px;
+    color:#1428a0;
+}
+.center .tab .txt{
+    height:85px;
+    position:relative;
+}
+.txt input{
+    width:480px;
+    height:48px;
+    border:0;
+    border-bottom:1px solid;
+    border-bottom-color: #ddd;
+    position:absolute;
+    bottom:0;
+    font-size:18px;
+    color:#767676;
+}
+.txt label{
+    cursor:text;
+    position:absolute;
+    bottom:10px;
+    z-index:2;
+    font-size:18px;
+    color:#767676;
+}
+.center .vip{
+    cursor:pointer;
+    width:480px;
+    height:288px;
+}
+.center .remb{
+    cursor:pointer;
+    width:115px;
+    height:80px;
+    display:flex;
+    align-items:center;
+}
+.remb .check{
+    display:none;
+}
+.remb .rebtn{
+    width:18px;
+    height:18px;
+    border-radius:4px;
+    display:inline-block;
+    border:1px solid #bdc3c9;
+    margin-right:8px;
+}
+.rebtn .checkphto{
+    display:none;
+}
+.tab button{
+    cursor:pointer;
+    width:180px;
+    height:50px;
+    border:2px solid #000;
+    background:#fff;
+    border-radius:6px;
+    font-size:14px;
+    position:absolute;
+    left:50%;
+    margin-left:-90px;
+    bottom:-112px;
+}
+#box .bttm{
+    width:156px;
+    height:100px;
+    position:absolute;
+    left:50%;
+    margin-left:-78px;
+    bottom:0;
+    text-align:center;
+    padding-top:42px;
+}
+.bttm a{
+    font-size:16px;
+    color:#1428a0;
+}
