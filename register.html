@@ -6,72 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>注册</title>
     <link rel="stylesheet" href="css/login.css">
-    <style>
-        body{
-            background:#f7f7f7;
-        }
-        #tit{
-            position:relative;
-            left:50%;
-            margin-left:-301px;
-            width:602px;
-            background:#f7f7f7;
-            font-size:20px;
-            height:40px;
-            text-align:left;
-            top:50px;
-        }
-        #box{
-            margin-top:50px;
-            border-radius:5px;
-            box-shadow: 0 0 2px #767676;
-        }
-        #box .center h1{
-            font-size:22px;
-            color:#000;
-            font-weight:bold;
-        }
-        #box .center .tit{
-            height:112px;
-            margin-top:50px;
-        }
-        #box .center .kind{
-            height:90px;
-            display:flex;
-            justify-content:space-around;
-        }
-        #box .center h2{
-            color:#767676;
-            font-size:22px;
-            font-weight:bold;
-        }
-        .center .txt .coimg{
-            width:275px;
-            height:48px;
-            position:absolute;
-            border:1px solid;
-            bottom:0;
-        }
-        .center .txt .after{
-            display:block;
-            content:"";
-            width:52px;
-            height:52px;
-            position:absolute;
-            left:275px;
-            bottom:0;
-        }
-        .center .logbtn{
-            width:190px;
-            height:50px;
-            border:0;
-            background:#a0a8d8;
-            color:#fff;
-            left:0;
-            margin-left:0;
-            font-size:18px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
         <div> 
@@ -91,30 +26,44 @@
                                 <h2>邮件</h2>
                                 <h2>手机号码</h2>
                             </div>
-                            <div class="txt">
+                            <div class="txt num_txt">
                                 <label for="num" class="zh">手机号码</label>
                                 <input type="text" name="number" id="num">
                             </div>
-                            <div class="txt">
+                            <p class="erro num_erro"></p>
+                            <div class="txt pwd_txt">
                                 <label for="pwd" class="mm">密码</label>
                                 <input type="password" name="password" id="pwd">
                             </div>
-                            <div class="txt">
-                                    <label for="repwd" class="mm">确认密码</label>
+                            <p class="erro pwd_erro"></p>
+                            <div class="txt repwd_txt">
+                                    <label for="repwd" class="rmm">确认密码</label>
                                     <input type="password" name="repassword" id="repwd">
                             </div>
+                            <p class="erro repwd_erro"></p>
                             <div class="txt">
                                     <img src="imgs/login/codimg.png" alt="load" class="coimg">
                                     <img src="imgs/login/reload.png" alt="loading" class="after">
                             </div>
-                            <div class="txt">
-                                    <label for="code" class="mm">安全代码</label>
+                            <div class=" txt code_txt">
+                                    <label for="code" class="am">安全代码</label>
                                     <input type="text" name="code" id="code">
                             </div>
-                            <button type="submit" class="logbtn">注册</button>
+                            <p class="erro code_erro"></p>
+                            <button type="submit" class="regbtn" disabled>注册</button>
                         </form>
                     </div>
                 </div>
             </div>
+            <script src="js/jquery-3.3.1.min.js"> </script>
+            <script src="js/move.js"></script>
+            <script src="js/register.js"></script>
+            <script>
+                moveing.init();
+                checkinfo.init();
+                if($(".erro").html==""){
+                    document.querySelector(".regbtn").disabled="false";
+                }
+            </script>
 </body>
 </html>

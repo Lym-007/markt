@@ -1,0 +1,20 @@
+
+@charset "utf-8";
+html,body,p,span,ul,li,ol,div,form,i,h1,h2,h3,h4,h5,h6,
+figure,figcaption,input,lable,button,img,a{
+    margin:0;
+    padding:0;
+}
+ul,li,ol{
+    list-style:none;
+}
+input{
+    outline:none;
+}
+img{
+    float:left;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
