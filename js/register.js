@@ -20,8 +20,7 @@ var moveing = (function () {
                 var target = e.target || e.srcElement;
                 if (target.nodeName === "LABEL") {
                     movedt(target, { bottom: 43 }, 100);
-                    target.style.color = "#1428a0";
-                    target.style.fontSize = "12px";
+                    target.className="labc";
                 }
 
             };
@@ -96,83 +95,20 @@ var moveing = (function () {
                  },false);
         },
         inpfocus: function (ele) {
-            ele.style.color = "#1428a0";
-            ele.style.borderColor = "#1428a0";
-            ele.style.borderWidth = "2px";
+            ele.setAttribute("class","elefocus");
         },
         inpblur: function (ele) {
-            ele.style.color = "#000";
-            ele.style.borderWidth = "1px";
-            ele.style.borderColor = "#767676";
+            ele.setAttribute("class","eleblur")
         },
         labelblur: function (ele, flag) {
             if (flag) {
-                ele.style.color = "#767676";
+                ele.setAttribute("class","eleisfblur")
             }
             else {
                 movedt(ele, { bottom: 10 }, 100);
-                ele.style.fontSize = "18px";
-                ele.style.color = "#767676";
+                ele.setAttribute("class","elenofblur")
             }
 
         }
     }
-}());
-
-var checkinfo=(function(){
-    var _form=document.querySelector(".tab");
-    var _num=_form.number;
-    var _pwd=_form.password;
-    var _repwd=_form.repassword;
-    var _code=_form.code;
-    var flag=0;
-    return {
-        init:function(){
-            this.event();
-        },
-        event:function(){
-            var _this =this;
-            _num.addEventListener("change",function(){
-                console.log(_num.value);
-                var reg=/^1[34578]\d{9}$/;
-                if(reg.test(_num.value)){
-                    console.log(1);
-                    $(".num_erro").html("");
-                }
-                else{
-                    console.log(0);
-                    $(".num_erro").html("请输入有效的电话号码");
-                }
-                _num.style.color="#fff";
-            },false);
-            _pwd.addEventListener("change",function(){
-                console.log(_pwd.value);
-                var reg=/^[a-zA-Z0-9]*(?=[a-zA-Z0-9]{8,})(?=[a-zA-Z0-9]*\d)(?=[a-zA-Z0-9]*[a-zA-Z])[a-zA-Z0-9]*$/;
-                if(reg.test(_pwd.value)){
-                    console.log(1);
-                    
-                    $(".pwd_erro").html("");
-                }
-                else{
-                    console.log(0);
-                    $(".pwd_erro").html("您的密码必须包含至少8个字符，需同时包括字母与数字");
-                }
-                _num.style.color="#fff";
-            },false);
-            _repwd.addEventListener("change",function(){
-                console.log(_repwd.value);
-        
-                if(_repwd.value===_pwd.value){
-                    console.log(1);
-                    $(".repwd_erro").html("");
-                }
-                else{
-                    console.log(0);
-                    $(".repwd_erro").html("两次密码不一致");
-                }
-                _num.style.color="#fff";
-            },false);
-        }
-    }
-   
 }());

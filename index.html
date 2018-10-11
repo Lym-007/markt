@@ -1,231 +1,647 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/comm.css">
     <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/iconfont2.css">
+    <link rel="stylesheet" href="css/iconfont1.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.css">
 </head>
+
 <body>
     <div class="gotop">
         <div class="sanj"></div>
     </div>
-        <div id="tit">
-            <div class="tit_con">
-                <p>三星网上商城</p>
-                <p class="txt">
-                    <span>三星官网</span>
-                    <i class="iconfont icon-tiaozhuan"></i>
-                </p>
-            </div>
+    <div id="tit">
+        <div class="tit_con">
+            <p><a href="index.html">三星网上商城</a></p>
+            <p class="txt">
+                <span><a href="#">三星官网</a></span>
+                <i class="iconfont icon-tiaozhuan"></i>
+            </p>
         </div>
-        <div id="nav">
-            <div class="nav_con">
-                <div class="top">
+    </div>
+    <div id="nav">
+        <div class="nav_con">
+            <div class="top">
                 <ul class="ltxt">
-                    <li><a href="#">智能手机</a></li>
-                    <li><a href="#">可穿戴设备</a></li>
-                    <li><a href="#">个人电脑</a></li>
-                    <li><a href="#">空气净化器</a></li>
-                    <li><a href="#">配件</a></li>
+                    <li>
+                        <a href="#">智能手机</a>
+                        <div class="info l1">
+                            <div>
+                                <figure>
+                                    <img src="imgs/index/note.jpg" alt="loading">
+                                    <figcaption>盖乐世 Note9</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/s9.jpg" alt="loading">
+                                    <figcaption>盖乐世 S9+ </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/s8.jpg" alt="loading">
+                                    <figcaption>盖乐世 S8 Star</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/a9.jpg" alt="loading">
+                                    <figcaption>盖乐世 A9 Star</figcaption>
+                                </figure>
+                            </div>
+                            <p>盖乐世S系列</p>
+                            <p>盖乐世Note系列</p>
+                            <p>盖乐世A系列</p>
+                            <p>盖乐世C系列</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">可穿戴设备</a>
+                        <div class="info l2">
+                            <div>
+                                <figure>
+                                    <img src="imgs/index/sb1.jpg" alt="loading">
+                                    <figcaption>盖乐世 Note91111</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/sb2.jpg" alt="loading">
+                                    <figcaption>盖乐世 S9+ </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/sb3.jpg" alt="loading">
+                                    <figcaption>盖乐世 S8 Star</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/sb4.jpg" alt="loading">
+                                    <figcaption>盖乐世 A9 Star</figcaption>
+                                </figure>
+                            </div>
+                            <p>盖乐世S系列</p>
+                            <p>盖乐世Note系列</p>
+                            <p>盖乐世A系列</p>
+                            <p>盖乐世C系列</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">个人电脑</a>
+                        <div class="info l3">
+                            <div>
+                                <figure>
+                                    <img src="imgs/index/dn1.jpg" alt="loading">
+                                    <figcaption>盖乐世 Note92222</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/dn2.jpg" alt="loading">
+                                    <figcaption>盖乐世 S9+ </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/dn3.jpg" alt="loading">
+                                    <figcaption>盖乐世 S8 Star</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/dn4.jpg" alt="loading">
+                                    <figcaption>盖乐世 A9 Star</figcaption>
+                                </figure>
+                            </div>
+                            <p>盖乐世S系列</p>
+                            <p>盖乐世Note系列</p>
+                            <p>盖乐世A系列</p>
+                            <p>盖乐世C系列</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">空气净化器</a>
+                        <div class="info l4">
+                            <div>
+                                <figure>
+                                    <img src="imgs/index/note.jpg" alt="loading">
+                                    <figcaption>盖乐世 Note9333</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/s9.jpg" alt="loading">
+                                    <figcaption>盖乐世 S9+ </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/s8.jpg" alt="loading">
+                                    <figcaption>盖乐世 S8 Star</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/a9.jpg" alt="loading">
+                                    <figcaption>盖乐世 A9 Star</figcaption>
+                                </figure>
+                            </div>
+                            <p>盖乐世S系列</p>
+                            <p>盖乐世Note系列</p>
+                            <p>盖乐世A系列</p>
+                            <p>盖乐世C系列</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">配件</a>
+                        <div class="info l5">
+                            <div>
+                                <figure>
+                                    <img src="imgs/index/note.jpg" alt="loading">
+                                    <figcaption>盖乐世 Note9444</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/s9.jpg" alt="loading">
+                                    <figcaption>盖乐世 S9+ </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/s8.jpg" alt="loading">
+                                    <figcaption>盖乐世 S8 Star</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/a9.jpg" alt="loading">
+                                    <figcaption>盖乐世 A9 Star</figcaption>
+                                </figure>
+                            </div>
+                            <p>盖乐世S系列</p>
+                            <p>盖乐世Note系列</p>
+                            <p>盖乐世A系列</p>
+                            <p>盖乐世C系列</p>
+                        </div>
+                    </li>
                 </ul>
                 <img src="imgs/index/logo.png" alt="loading" class="logo">
                 <ul class="rtxt">
-                        <li><i class="iconfont icon-dianhua"></i><a href="#">400 071 8899</a></li>
-                        <li><i class="iconfont icon-liaotianchat52"></i><a href="#">在线客服</a></li>
-                        <li><i class="iconfont icon-denglu"></i><a href="login.html">登录</a></li>
-                        <li><i class="iconfont icon-search"></i><a href="#"></a></li>
-                        <li><i class="iconfont icon-Shapecopy"></i><a href="#"></a></li>
-                </ul>
-                </div>
-               <div class="info">
-                   <div>
-                       <figure>
-                        <img src="imgs/index/note.jpg" alt="loading">
-                        <figcaption>盖乐世 Note9</figcaption>
-                   </figure>
-                   <figure>
-                        <img src="imgs/index/s9.jpg" alt="loading">
-                        <figcaption>盖乐世 S9+</figcaption>
-                   </figure>
-                   <figure>
-                        <img src="imgs/index/s8.jpg" alt="loading">
-                        <figcaption>盖乐世 S8</figcaption>
-                   </figure>
-                   <figure>
-                        <img src="imgs/index/a9.jpg" alt="loading">
-                        <figcaption>盖乐世 A9 Star</figcaption>
-                   </figure>
-                   </div>
-                   
-                   <ul>
-                       <li>盖乐世S系列</li>
-                       <li>盖乐世Note系列</li>
-                       <li>盖乐世A系列</li>
-                       <li>盖乐世C系列</li>
-                   </ul>
-               </div>
-            </div>
-        </div>
-        <div id="banner">
-            <div class="banner_con">
-                <div class="imgbox">
-                    <img src="imgs/index/0903-KV-A9Star-1920.jpg" alt="loading">
-                    <img src="imgs/index/0909-KV-S8S9-1920.jpg" alt="loading">
-                    <img src="imgs/index/0918_KV_HYTJ_1920x427.jpg" alt="loading">
-                    <img src="imgs/index/0920_kv1_Note9_1920_427.jpg" alt="loading">
-                    <img src="imgs/index/0920_kv_GoodPresent_1920_427.jpg" alt="loading">
-                    <img src="imgs/index/0924_kv_GQSJ_1920_427.jpg" alt="loading">
-                </div>
-                
-                <ul class="list">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><i class="iconfont icon-dianhua"></i><a href="#">400 071 8899</a></li>
+                    <li><i class="iconfont icon-liaotianchat52"></i><a href="#">在线客服</a></li>
+                    <li><i class="iconfont icon-denglu"></i><a href="login.html">登录</a></li>
+                    <li><i class="iconfont icon-search"></i><a href="#"></a></li>
+                    <li><i class="iconfont icon-Shapecopy"></i><a href="#"></a></li>
                 </ul>
             </div>
         </div>
-        <div id="case">
-            <div class="case_con">
-                <div class="top">
-                    <div class="photo">
-                        <img src="imgs/index/0-gln8.jpg" alt="l">
-                        <img src="imgs/index/0-gls.jpg" alt="l">
-                        <img src="imgs/index/o-yjhx.jpg" alt="l">
+    </div>
+    <div id="banner">
+        <div class="banner_con">
+            <div class="imgbox">
+                <img src="imgs/index/0903-KV-A9Star-1920.jpg" alt="loading">
+                <img src="imgs/index/0909-KV-S8S9-1920.jpg" alt="loading">
+                <img src="imgs/index/0918_KV_HYTJ_1920x427.jpg" alt="loading">
+                <img src="imgs/index/0920_kv1_Note9_1920_427.jpg" alt="loading">
+                <img src="imgs/index/0920_kv_GoodPresent_1920_427.jpg" alt="loading">
+                <img src="imgs/index/0924_kv_GQSJ_1920_427.jpg" alt="loading">
+            </div>
+
+            <ul class="list">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div id="case">
+        <div class="case_con">
+            <div class="top">
+                <div class="photo">
+                    <img src="imgs/index/0-gln8.jpg" alt="l">
+                    <img src="imgs/index/0-gls.jpg" alt="l">
+                    <img src="imgs/index/o-yjhx.jpg" alt="l">
+                </div>
+                <div class="pej">
+                    <div class="name">
+                        <span>配件</span>
+                        <ul>
+                            <li class="pej_tag tag_active">保护类</li>
+                            <li class="pej_tag">耳机/音响</li>
+                            <li class="pej_tag">电池/充电器</li>
+                        </ul>
+                        <a href="#">更多></a>
                     </div>
-                    <div class="pej">
-                            <div class="name">
-                                <span>配件</span>
-                                <ul>
-                                    <li class="pej_tag"><a href="#">保护类</a></li>
-                                    <li class="pej_tag"><a href="#">耳机/音响</a></li>
-                                    <li class="pej_tag"><a href="#">电池/充电器</a></li>
-                                </ul>
-                                <span>更多></span>
+                    <div class="pej_con">
+                        <div class="show">
+                            <div class="goods image">
+                                <figure>
+                                    <img src="imgs/index/15348163909814103_293X293_002.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/15348164868786832_293X293.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/15348414730008860_293X293.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/15348414730008860_293X293_002.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+
                             </div>
-                            <div class="pej_con">
-                                <div class="show">
-                                    <div class="image">
-                                            <figure>
-                                            <img src="imgs/index/15348163909814103_293X293_002.jpg" alt="l">
-                                            <figcaption>盖乐世</figcaption>
-                                            <span>￥999.00</span>
-                                            </figure>
-                                            <figure>
-                                                <img src="imgs/index/15348164868786832_293X293.jpg" alt="l">
-                                                <figcaption>盖乐世</figcaption>
-                                                <span>￥999.00</span>
-                                            </figure>
-                                            <figure>
-                                                <img src="imgs/index/15348414730008860_293X293.jpg" alt="l">
-                                                <figcaption>盖乐世</figcaption>
-                                                <span>￥999.00</span>
-                                            </figure>
-                                            <figure>
-                                                <img src="imgs/index/15348414730008860_293X293_002.jpg" alt="l">
-                                                <figcaption>盖乐世</figcaption>
-                                                <span>￥999.00</span>
-                                            </figure>
-                                           
-                                    </div>
-                                    <div class="image">
-                                            <figure>
-                                            <img src="imgs/index/02-1.jpg" alt="l">
-                                            <figcaption>盖乐世</figcaption>
-                                            <span>￥999.00</span>
-                                            </figure>
-                                            <figure>
-                                                <img src="imgs/index/02-2.jpg" alt="l">
-                                                <figcaption>盖乐世</figcaption>
-                                                <span>￥999.00</span>
-                                            </figure>
-                                            <figure>
-                                                <img src="imgs/index/02-3.jpg" alt="l">
-                                                <figcaption>盖乐世</figcaption>
-                                                <span>￥999.00</span>
-                                            </figure>
-                                            <figure>
-                                                <img src="imgs/index/02-4.jpg" alt="l">
-                                                <figcaption>盖乐世</figcaption>
-                                                <span>￥999.00</span>
-                                            </figure>
-                                           
-                                    </div>
-                                    <div class="image">
-                                            <figure>
-                                            <img src="imgs/index/03-1.jpg" alt="l">
-                                            <figcaption>盖乐世</figcaption>
-                                            <span>￥999.00</span>
-                                            </figure>
-                                            <figure>
-                                                <img src="imgs/index/03-2.jpg" alt="l">
-                                                <figcaption>盖乐世</figcaption>
-                                                <span>￥999.00</span>
-                                            </figure>
-                                            <figure>
-                                                <img src="imgs/index/03-3.jpg" alt="l">
-                                                <figcaption>盖乐世</figcaption>
-                                                <span>￥999.00</span>
-                                            </figure>
-                                            <figure>
-                                                <img src="imgs/index/03-4.jpg" alt="l">
-                                                <figcaption>盖乐世</figcaption>
-                                                <span>￥999.00</span>
-                                            </figure>
-                                           
-                                    </div>
-                                </div>
-                                <img src="imgs/index/l_06.jpg" alt="l" class="pej-l">
-                                <img src="imgs/index/r_09.jpg" alt="r" class="pej-r">
+                            <div class="goods image">
+                                <figure>
+                                    <img src="imgs/index/02-1.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/02-2.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/02-3.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/02-4.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+
+                            </div>
+                            <div class="goods image">
+                                <figure>
+                                    <img src="imgs/index/03-1.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/03-2.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/03-3.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                                <figure>
+                                    <img src="imgs/index/03-4.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="phtl_box pej-l">
+                            <div class="phtl_btn"></div>
+                        </div>
+                        <div class="phtr_box pej-r">
+                            <div class="phtr_btn"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="scase">
+                <div class="tit">
+                    <p class="hot">活动专区</p>
+                    <div class="swiper-container tit-con">
+                        <div class="swiper-wrapper titimg">
+                            <img class="swiper-slide" src="imgs/index/lb3.jpg" alt="loading" class="image1">
+                            <img class="swiper-slide" src="imgs/index/lb2.jpg" alt="loading" class="image1">
+                        </div>
+                        <ul class="swiper-pagination list">
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <p class="hot">本周热销</p>
+                    <div class="goods">
+                        <figure class="sp">
+                            <img src="imgs/index/sj1.jpg" alt="l">
+                            <figcaption>盖乐世</figcaption>
+                            <span>￥999.00</span>
+                        </figure>
+                        <figure class="sp">
+                            <img src="imgs/index/sj2.jpg" alt="l">
+                            <figcaption>盖乐世</figcaption>
+                            <span>￥999.00</span>
+                        </figure>
+                        <figure class="sp">
+                            <img src="imgs/index/sj3.jpg" alt="l">
+                            <figcaption>盖乐世</figcaption>
+                            <span>￥999.00</span>
+                        </figure>
+                        <figure class="sp">
+                            <img src="imgs/index/sj4.jpg" alt="l">
+                            <figcaption>盖乐世</figcaption>
+                            <span>￥999.00</span>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="scase">
+                <div class="tit">
+                    <p class="hot"></p>
+                    <div class="swiper-container tit-con container2">
+                        <div class="swiper-wrapper titimg">
+                            <img class="swiper-slide" src="imgs/index/lb1.jpg" alt="loading" class="image1">
+                            <img class="swiper-slide" src="imgs/index/lb4.jpg" alt="loading" class="image1">
+                        </div>
+                        <ul class="swiper-pagination tag2 list">
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <p class="hot">为您推荐</p>
+                    <ul class="goods_nav tuitag">
+                        <!-- <li class="_tag">智能手机</li>
+                        <li class="_tag">可穿戴设备</li>
+                        <li class="_tag">电池/充电器</li> -->
+                    </ul>
+                    <div class="my-container">
+                        <div class="swiper-wrapper">
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/pb1.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/pb2.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/pb3.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/pb4.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/02-1.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/02-2.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/02-3.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/02-4.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/03-1.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/03-2.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/03-3.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="imgs/index/03-4.jpg" alt="l">
+                                <figcaption>盖乐世</figcaption>
+                                <span>￥999.00</span>
+                            </figure>
+                        </div>
+                        <div class="phtl_box tuil">
+                            <div class="phtl_btn"></div>
+                        </div>
+                        <div class="phtr_box tuir">
+                            <div class="phtr_btn"></div>
                         </div>
                     </div>
                 </div>
-                <div class="scase">
-                    <div class="tit">
-                        <div class="tit-con"></div>
-                    </div>
-                    <div class="product">
-
-                    </div>
-                </div>  
             </div>
         </div>
-        <div id="about">
-            <div class="about_con"></div>
+    </div>
+    </div>
+    <div id="about">
+        <div class="about_con">
+            <div>
+                <i class="iconfont icon-dianhua"></i>
+                <ul>
+                    <li>致电服务中心</li>
+                    <li>400 071 8899</li>
+                    <li>周一-周日 9:00-22:00</li>
+                </ul>
+            </div>
+            <div>
+                    <i class="iconfont icon-denglu otheri"></i>
+                    <ul class="otherul">
+                        <li>致电服务中心</li>
+                        <li>400 071 8899</li>
+                        <li>周一-周日 9:00-22:00</li>
+                    </ul>
+                </div>
+                <div>
+                        <i class="iconfont icon-zuanshi otheri"></i>
+                        <ul class="lastul otherul">
+                            <li>致电服务中心</li>
+                            <li>400 071 8899</li>
+                            <li>周一-周日 9:00-22:00</li>
+                        </ul>
+             </div>
         </div>
-        <div id="info">
-            <div class="info_con"></div>
+    </div>
+    <div id="info">
+        <div class="info_con">
+            <div>
+                <div>
+                    <ul>
+                        <li class="firstli">我的三星</li>
+                        <li>我的订单</li>
+                        <li>我的积分</li>
+                        <li>我的优惠券</li>
+                        <li>个人资料</li>
+                        <li>收货地址</li>
+                        <li>售后网点查询</li>
+                    </ul>
+                    <ul>
+                            <li class="firstli">网上商城指南</li>
+                            <li>我的订单</li>
+                            <li>我的积分</li>
+                            <li>我的优惠券</li>
+                            <li>个人资料</li>
+                            <li>收货地址</li>
+                            <li>售后网点查询</li>
+                        </ul>
+                        <ul>
+                                <li class="firstli">服务支持</li>
+                                <li>我的订单</li>
+                                <li>我的积分</li>
+                                <li>我的优惠券</li>
+                                <li>个人资料</li>
+                                <li>收货地址</li>
+                                <li>售后网点查询</li>
+                            </ul>
+                </div>
+                <div>
+                    <p>官方分享</p>
+                    <i class="iconfont icon-weibo"></i>
+                    <i class="iconfont icon-unie655"></i>
+                    <i class="iconfont icon-tengxunweibo1"></i>
+                    <i class="iconfont icon-shoujijinrong"></i>
+                    <span>盖乐世社区</span>
+                </div>
+            </div>
+            <p>&copy; 1995-2018 三星投资有限公司所有</p>
         </div>
-        <div id="bottom">
-            <div class="bottom_con"></div>
+    </div>
+    <div id="bottom">
+        <div class="bottom_con">
+            <div>
+                <ul>
+                    <li><a href="#">服务条款</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">访客协议</a></li>
+                </ul>
+                <p>浏览此网页建议使用ie9以上浏览器</p>
+            </div>
+            <div>
+                <p>三星网上商城授权北京电宝电子商务有限公司运营三星网上商城并销售商品，由</p>
+                <span>京备999牌</span>
+            </div>
         </div>
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/index.js">   
-           // $(".imgbox").animate({left:"-1920px"},1000)
-        </script>
-        <script>
-            //鼠标滚动事件
-            mouseScroll.init();
-            //nav鼠标事件
-            navover.init();
+    </div>
+    <div class="show_info info">
+        <div>
+            <figure>
+                <img src="imgs/index/note.jpg" alt="loading">
+                <figcaption>盖乐世 Note9</figcaption>
+            </figure>
+            <figure>
+                <img src="imgs/index/s9.jpg" alt="loading">
+                <figcaption>盖乐世 S9+ </figcaption>
+            </figure>
+            <figure>
+                <img src="imgs/index/s8.jpg" alt="loading">
+                <figcaption>盖乐世 S8 Star</figcaption>
+            </figure>
+            <figure class="lastinfo">
+                <img src="imgs/index/a9.jpg" alt="loading">
+                <figcaption>盖乐世 A9 Star</figcaption>
+            </figure>
+        </div>
+        <p>盖乐世S系列</p>
+        <p>盖乐世Note系列</p>
+        <p>盖乐世A系列</p>
+        <p>盖乐世C系列</p>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/comm.js"></script>
+    <script>
 
-            //banner轮播
-            var _box=document.querySelector('.banner_con');
-            var _showbox=document.querySelector(".imgbox");
-            var _tag=document.querySelector('.list');
-            var _showtags=_tag.children;
-            move.init(_box,_showbox,_tag,_showtags,null,null,1920);
-            //case轮播
-            jqmove.init();
-        </script>
-        <script>
-           
-        </script>
+        // List位置初始化，Info位置初识化
+        window.onload = function () {
+            $(".info").css("top", "101px");
+            var _list = document.querySelectorAll(".list");
+            i=0;
+             $(_list[i]).css("margin-left", -parseInt(_list[i].offsetWidth / 2) + "px");
+        }
+        // scase第一个轮播
+            var mySwiper = new Swiper('.swiper-container', {
+                direction: 'horizontal', // 切换方向选项
+                loop: true, // 循环模式选项
+                autoplay: {
+                    disableOnInteraction: false,
+                },
+                delay: 3000,
+                speed: 500,
+                slideActiveClass: 'swiper-slide-active',
+                // 如果需要分页器
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    bulletClass: 'list',
+                    bulletActiveClass: 'active',
+                }
+
+            });
+            // $(".swiper-container").mouseenter(function(){
+                // mySwiper.autoplay.stop();
+            // });
+            // $(".swiper-container").mouseleave(function(){
+                // mySwiper.autoplay.start();
+            // });
+            // scase第二个轮播
+            var arr = ['智能手机', '可穿戴设备', '电池/充电器'];
+            var mySwipertui = new Swiper('.my-container', {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                slidesPerGroup: 4,
+                autoplay: {
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: '.tuitag',
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<li class="' + className + '">' + arr[index] + '</li>';
+                    },
+                    // type:'custom',
+                    // bulletElement:'li',
+                    bulletClass:'_tag',
+                    bulletActiveClass: 'tag_active',
+                },
+                navigation: {
+                    nextEl: '.tuil',
+                    prevEl: '.tuir',
+                },
+            });
+            $(".my-container").mouseenter(function(){
+                mySwipertui.autoplay.stop();
+            });
+            $(".my-container").mouseleave(function(){
+                mySwipertui.autoplay.start();
+            });
+
+        //鼠标滚动事件
+        mouseScroll.init();
+        //nav鼠标事件
+        navover.init();
+
+        //banner轮播
+        function bannermove() {
+            var _box = document.querySelector('.banner_con');
+            var _showbox = document.querySelector(".imgbox");
+            var _tag = document.querySelector('.list');
+            var _showtags = _tag.children;
+            move.init(_box, _showbox, _tag, _showtags, null, null, 1920);
+            return _box.timer;
+        }
+        var timer = bannermove();
+        //case轮播
+        jqmove.init(".pej_con", ".image", ".pej_tag", ".pej-l", ".pej-r");
+
+        // 商品图片切换
+        changeimg.init(".sp");
+    </script>
+    <script>
+
+
+
+    </script>
 </body>
+
 </html>

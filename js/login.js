@@ -19,8 +19,7 @@ var moveing = (function () {
                 var target = e.target || e.srcElement;
                 if (target.nodeName === "LABEL") {
                     movedt(target, { bottom: 43 }, 100);
-                    target.style.color = "#1428a0";
-                    target.style.fontSize = "12px";
+                    target.className="labc";
                 }
 
             };
@@ -65,29 +64,23 @@ var moveing = (function () {
             };
              _checked.onclick=function(e){
                  $(".checkphto").fadeToggle();
-                 console.log($(".checkphto").css("display"));
                  _checkbtn.onclick();
                 _checkbtn.click();
              }
         },
         inpfocus: function (ele) {
-            ele.style.color = "#1428a0";
-            ele.style.borderColor = "#1428a0";
-            ele.style.borderWidth = "2px";
+            ele.setAttribute("class","elefocus");
         },
         inpblur: function (ele) {
-            ele.style.color = "#000";
-            ele.style.borderWidth = "1px";
-            ele.style.borderColor = "#767676";
+            ele.setAttribute("class","eleblur")
         },
         labelblur: function (ele, flag) {
             if (flag) {
-                ele.style.color = "#767676";
+                ele.setAttribute("class","eleisfblur")
             }
             else {
                 movedt(ele, { bottom: 10 }, 100);
-                ele.style.fontSize = "18px";
-                ele.style.color = "#767676";
+                ele.setAttribute("class","elenofblur")
             }
 
         }

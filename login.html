@@ -19,29 +19,30 @@
                 <div class="tit">
                     <h1>三星账户</h1>
                 </div>
-                <form action="" method="get" class="tab">
+                <form action="" method="post" class="tab" onsubmit="return false"  autocomplete="off">
                     <!-- for=id名，控制部件 -->
                     <div class="txt">
                         <label for="num" class="zh">电子邮件或手机号码</label>
-                        <input type="text" name="number" id="num">
+                        <input type="text" name="number" id="num" required>
                     </div>
+                    <p class="erro num_erro"></p>
                     <div class="txt">
                         <label for="pwd" class="mm">密码</label>
-                        <input type="password" name="password" id="pwd">
+                        <input type="password" name="password" id="pwd" required>
                     </div>
-
+                    <p class="erro pwd_erro"></p>
                     <div class="remb">
                         <input type="checkbox" name="remb" class="check">
                         <div class="rebtn" ><img src="imgs/login/checked.png" alt="load" class="checkphto"></div>
                         <span>记住我的ID</span>
                     </div>
                     <img src="imgs/login/vip.jpg" alt="loading" class="vip">
-                    <button type="submit" class="logbtn">登录</button>
+                    <button type="submit" class="btn logbtn" name="logbtn">登录</button>
 
                 </form>
             </div>
             <div class="bttm">
-                <a href="#">查找ID或充值密码？</a>或<a href="#">点此注册</a>
+                <a href="#">查找ID或充值密码？</a>或<a href="register.html">点此注册</a>
             </div>
         </div>
     </div>
@@ -49,6 +50,9 @@
     <script src="js/move.js"></script>
     <script src="js/ajax.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/checkinfo.js"></script>
+    <script src="js/checkajax.js"></script>
+    <script src="js/checklogin.js"></script>
     <script>
         window.onload = function () {
             var _form = document.querySelector("form");
@@ -57,6 +61,26 @@
             //console.log($(".check").css("display"));
         }
         moveing.init();
+        checkinfo.init();
+        $(".logbtn").click(function(){
+              var _errobox=document.querySelectorAll(".erro");
+                var flag=0;
+                for(var i=0;i<_errobox.length;i++){
+                    if(_errobox[i].innerHTML==""){
+                        flag=1;
+                    }
+                    else{
+                        
+                    }
+                }
+                if(!flag){
+                    login.init(".tab");
+                    $(".logbtn")[0].onclick();
+                }
+                else{
+                    alert("信息有误");
+                }
+        });
     </script>
 </body>
 

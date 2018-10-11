@@ -20,25 +20,25 @@
                             <h1>创建您的三星账户</h1>
                             <span>通过三星账户来获取盖乐世的更多功能</span>
                         </div>
-                        <form action="" method="get" class="tab">
+                        <form action="" method="post" class="tab" onsubmit="return false">
                             <!-- for=id名，控制部件 -->
                             <div class="kind">
                                 <h2>邮件</h2>
-                                <h2>手机号码</h2>
+                                <h2 class="checked">手机号码</h2>
                             </div>
                             <div class="txt num_txt">
                                 <label for="num" class="zh">手机号码</label>
-                                <input type="text" name="number" id="num">
+                                <input type="text" name="number" id="num" required>
                             </div>
                             <p class="erro num_erro"></p>
                             <div class="txt pwd_txt">
                                 <label for="pwd" class="mm">密码</label>
-                                <input type="password" name="password" id="pwd">
+                                <input type="password" name="password" id="pwd" required>
                             </div>
                             <p class="erro pwd_erro"></p>
                             <div class="txt repwd_txt">
                                     <label for="repwd" class="rmm">确认密码</label>
-                                    <input type="password" name="repassword" id="repwd">
+                                    <input type="password" name="repassword" id="repwd" required>
                             </div>
                             <p class="erro repwd_erro"></p>
                             <div class="txt">
@@ -47,10 +47,10 @@
                             </div>
                             <div class=" txt code_txt">
                                     <label for="code" class="am">安全代码</label>
-                                    <input type="text" name="code" id="code">
+                                    <input type="text" name="code" id="code" required>
                             </div>
                             <p class="erro code_erro"></p>
-                            <button type="submit" class="regbtn" disabled>注册</button>
+                            <button type="submit" class="btn regbtn" name="regbtn">注册</button>
                         </form>
                     </div>
                 </div>
@@ -58,12 +58,43 @@
             <script src="js/jquery-3.3.1.min.js"> </script>
             <script src="js/move.js"></script>
             <script src="js/register.js"></script>
+            <script src="js/checkinfo.js"></script>
+            <script src="js/checkajax.js"></script>
+            <script src="js/checkregister.js"></script>
             <script>
                 moveing.init();
                 checkinfo.init();
-                if($(".erro").html==""){
-                    document.querySelector(".regbtn").disabled="false";
-                }
+                $(".regbtn").click(function(){
+                    var _errobox=document.querySelectorAll(".erro");
+                        var flag=0;
+                        for(var i=0;i<_errobox.length;i++){
+                            if(_errobox[i].innerHTML==""){
+                                flag=1;
+                            }
+                        }
+                        console.log(flag)
+                        if(!flag){
+                            register.init(".tab");
+                            $(".regbtn")[0].onclick();
+                        }
+                        else{
+                            alert("信息有误");
+                        }
+                  });
+                  var _kind=document.querySelector(".kind");
+                  _kind.addEventListener("click",function(e){
+                      e=e||window.e;
+                      var target=e.target||e.srcElement;
+                      var _hbox=document.querySelectorAll("h2");
+                      var _num=document.querySelector(".zh");
+                      if(target.nodeName==="H2"){
+                          for(var i=0;i<_hbox.length;i++){
+                              _hbox[i].className="";
+                          }
+                          target.className="checked";
+                          _num.innerHTML=target.innerHTML;
+                      }
+                  },false)
             </script>
 </body>
 </html>

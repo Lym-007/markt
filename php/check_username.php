@@ -4,22 +4,22 @@
     header("Content-Type: application/json");
     // 允许所有域名跨域
     header("Access-Control-Allow-Origin:*");
-    include "connect_db.php";
+    include "public/connect_db.php";
     // 获取传输的json字符串
     $json = json_decode(file_get_contents("php://input"));
     $username = $json -> username;
-    $password = $json -> password;
-    $sql = "SELECT * from user WHERE number='$username' and password='$password'";
+    $sql = "SELECT * from user WHERE number='$username'";
     $coon = new db();
+    // 判断用户名称是否存在
     $rows = $coon -> Query($sql, 2);
     // 如果可以找到,返回关联数组, 找不到返回null
     if($rows) {
-      // 输入正确
-      $arr = array("code" => "200", "msg" => "", "data" => array("id" => $rows["id"], "token"=> "1112233"));
+      // 查到结果
+      $arr = array("code" => "1000", "msg" => "用户名已经存在");
 
     } else {
-      // 输入错误
-      $arr = array("code" => "1000", "msg" => "电话号码或者密码错误");
+      // 没查到
+      $arr = array("code" => "200", "msg" => "");
     }
     echo json_encode($arr);
 

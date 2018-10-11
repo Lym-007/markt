@@ -52,6 +52,31 @@ body>div{
     height:85px;
     position:relative;
 }
+.txt .labc{
+   color : #1428a0;
+   font-size : 12px;
+}
+.txt .txterro{
+    color:red;
+    border-color:red;
+}
+.txt .elefocus{
+    color:#1428a0;
+    border-color:#1428a0;
+    border-width :2px;
+}
+.txt .eleblur{
+    color :#000;
+    border-width : 1px;
+    border-color : #767676;
+}
+.txt .eleisfblur{
+    color : #767676;
+}
+.txt .elenofblur{
+    font-size : 18px;
+    color: #767676;
+}
 .txt input{
     width:480px;
     height:48px;
@@ -70,6 +95,14 @@ body>div{
     z-index:2;
     font-size:18px;
     color:#767676;
+}
+.erro{
+    font-size:14px;
+    color:red;
+    height:0;
+    line-height:20px;
+    margin:0;
+    padding:0;
 }
 .center .vip{
     cursor:pointer;

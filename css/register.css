@@ -33,8 +33,17 @@ body{
     line-height:90px;
     display:flex;
     justify-content:space-around;
+    cursor:pointer;
+}
+#box .center .kind .checked{
+    font-weight:bold;
+    color:#1428a0;
+    border-bottom:4px solid #1428a0;
 }
 #box .center h2{
+    width:240px;
+    height:90px;
+    text-align:center;
     color:#767676;
     font-size:22px;
     font-weight:bold;
