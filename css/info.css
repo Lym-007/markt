@@ -1,0 +1,368 @@
+@charset "utf-8";
+#goods_info{
+    height:auto;
+}
+.goods_info_con{
+    height:926px;
+    width:1220px;
+    margin:0 auto;
+}
+.path{
+    width:1220px;
+    height:64px;
+    font-size:14px;
+    color:#333;
+    line-height:64px;
+    cursor:pointer;
+    margin:0 auto;
+}
+.sinfo{
+    width:1220px;
+    margin:0 auto;
+    height:auto;
+}
+.sinfo>.sinfo_l{
+    width:575px;
+    position:relative;
+    float:left;
+    height:auto;
+}
+.min{
+    width:570px;
+    height:570px;
+    display:flex;
+    position:relative;
+    overflow:hidden;
+    left:50px;
+}
+.min>img{
+    width:570px;
+    height:570px;
+    flex:1;
+    /*border-radius:50%;*/
+}
+.max{
+    width:570px;
+    height:570px;
+    position:absolute;
+    overflow:hidden;
+    display:none;
+    left:650px;
+    top:0;
+    border:1px solid #aaa; 
+    z-index: 99;
+}
+.max>img{
+    width:1625px;
+    height:1625px;
+    flex:1;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top:-813px;
+    margin-left:-813px;
+}
+/*max/max>img==min/min:after
+大盒子照片比上大盒子的值要等于小盒子比上放大镜的值*/
+.move{
+    width:200px;
+    height:200px;
+    background:#fff;
+    opacity:0.7;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top:-100px;
+    margin-left:-100px;
+    cursor:move;
+    display:none;
+    box-shadow:0 0 20px rgb(71, 43, 43);
+}
+.ban{
+    width:570px;
+    height:110px;
+    align-self:center;
+    margin:42px 0;
+    position:relative;
+    overflow:hidden;
+}
+.minbox{
+    width:99999px;
+    position: relative;
+}
+.ban li{
+    float:left;
+    margin-left:34px;
+    margin-top:5px;
+}
+.ban li img{
+    width:100px;
+    height:100px;
+}
+.checked{
+    border:1px solid;
+}
+
+.sinfo_r{
+    float:left;
+    margin-left:100px;
+    color:#333;
+}
+.sinfo_r li{
+    height:35px;
+    font-size:12px;
+    line-height:35px;
+    position: relative;
+    padding-left:70px;
+}
+.cscolor{
+    margin-top:20px;
+    height:50px;
+}
+.colorchecked{
+    border:2px solid #006ec7!important;
+}
+.cscolor>span{
+    float:left;
+    line-height:50px;
+}
+.litag{
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-11px;
+    width:48px;
+    height:22px;
+    background:#006ec7;
+    font-size:12px;
+    color:#fff;
+    border-radius:3px;
+    text-align:center;
+    line-height:22px;
+}
+.colortag{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:red;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-30px;
+    margin-top:-10px;
+}
+.lscolortag{
+    background:#006ec7;
+}
+.colorbox{
+    position: relative;
+    width:120px;
+    height:40px;
+    border:1px solid #ddd;
+    text-align:center;
+    line-height:40px;
+    padding-left:30px;
+    float:left;
+    margin-left:30px;
+}
+.price{
+    background:#f8f8f8;
+    width:540px;
+    margin-top:20px;
+    display:block;
+    height:auto!important;
+    height:100px;
+    min-height:100px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
+.pricetit{
+    line-height:50px;
+    position:absolute;
+    left:0;
+}
+.price>.line{
+    display:block;
+    width:446px;
+    height:2px;
+    background:#fff;
+    border-radius:2px;
+    left:50%;
+    top:50%;
+    margin-top:-1px;
+    margin-left:-223px;
+    position: absolute;
+}
+.price .price_txt{
+    padding-left:60px;
+    line-height:50px;
+}
+.price .cs{
+    font-size:16px;
+    font-weight: bold;
+    float:left;
+    /* line-height:70px; */
+}
+.price .number{
+    font-size:28px;
+    font-weight: bold;
+    float:right;
+    /* line-height:70px; */
+}
+.price .otherinfo{
+    height:auto!important;
+    height:50px;
+    min-height:50px;
+    margin-left:60px;
+    padding:10px;
+}
+.otherinfo>li{
+    position:relative;
+    top:10px;
+}
+.textag{
+    display:block;
+    width:50px;
+    height:20px;
+    border:2px solid #fa7236;
+    font-size:12px;
+    color:#fa7236;
+    border-radius:2px;
+    line-height:20px;
+    text-align:center;
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-10px;
+}
+.btn{
+    width:190px;
+    height:50px;
+    border:2px solid #000;
+    border-radius:50px;
+    text-align:center;
+    line-height:50px;
+    font-size:22px;
+    color:#000;
+    font-weight:bold;
+    background:#fff;
+    margin-left:60px;
+    margin-top:25px;
+    float:left;
+}
+.yjhx{
+    background:#2f0d9b;
+    color:#fff;
+}
+.top_bgbox{
+    width:100%;
+    background:#e1e3e5;
+    overflow:hidden;
+}
+.info_top{
+    width:1220px;
+    height:80px;
+    margin:0 auto;
+}
+.info_top>p{
+    font-size:24px;
+    color:#333;
+    line-height:80px;
+    float:left;
+    width:460px;
+    font-weight: bold;
+}
+.checkedli{
+    height:76px;
+    border-bottom:4px solid #1428a0;
+}
+.checkedli>a{
+    font-weight: bold;
+    color:#1428a0;
+}
+.info_top>ul>li{
+    float:left;
+    line-height:80px;
+    width:180px;
+    text-align:center;
+}
+.goods_info_con{
+    width:100%;
+    height:auto;
+    background:#fff;
+}
+.goods_ac{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+.ac_phto{
+    width:100%;
+    background:#000;
+}
+.phto2{
+    background:#fff;
+}
+.ac_phto>.ac_txt{
+    width:1220px;
+    height:302px;
+    background:#000;
+    text-align:center;
+    display:flex;
+    color:#fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.phto2>.ac_txt{
+    background:#fff;
+    color:#000;
+}
+.ac_txt>h3{
+    font-weight: bold;
+    font-size:70px;
+}
+.ac_txt>p{
+    width:843px;
+    font-size:14px;
+    text-align:center;
+}
+.ac_phto>img{
+    width:100%;
+    height:100%;
+}
+.ac_img{
+    width:1220px;
+  margin:0 auto;
+}
+.ac_img>.img_txt{
+    float:left;
+    padding-top:200px;
+}
+.ac_img>img{
+    width:720px;;
+    height:751px;
+    float:right;
+}
+.ac_img>.img_txt>h3{
+    width:280px;
+    font-size:70px;
+    font-weight: bold;
+}
+.img_txt>p{
+    width:430px;
+    color:#333;
+    line-height:32px;
+    height:200px;
+}
+.img_txt li{
+    font-size:12px;
+    color:#333;
+}
+.left_img>.img_txt{
+    float:right;
+}
+.left_img>img{
+    float:left;
+}
