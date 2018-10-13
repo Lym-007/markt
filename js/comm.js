@@ -5,6 +5,7 @@ $("figure").click(function(){
 //nav下拉列表事件
 var navover=(function(){
     var lul=document.querySelector(".ltxt");
+    console.log(lul)
     var _llibox=lul.children;
     var _info=document.querySelector(".show_info");
     return {
@@ -20,12 +21,11 @@ var navover=(function(){
                             $(".show_info").slideDown("fast");
                     }
                     }(i));
-                    _info.onmouseleave=(function(i){
-                         return function(){
-                            $(".show_info").stop();
+                    
+                    $(".show_info").mouseleave(function(){
+                             $(".show_info").stop();
                              $(".show_info").slideUp("fast");
-                            }
-                    }(i));
+                    });
             }
         }
     }
@@ -50,12 +50,12 @@ var mouseScroll=(function(){
                     _tit.style.display="none";
                     _nav.style.position="fixed";
                     _nav.style.zIndex=2;
-                    $(".info").css("top","65px");
+                    $(".show_info").css("top","166px");
                 }
                 else{
                     _tit.style.display="block";
                     _nav.style.position="relative";
-                    $(".info").css("top","101px");
+                    $(".show_info").css("top","102px");
                 }
 
                 if(top>100){

@@ -568,6 +568,12 @@ html body .tag_active{
     position:relative;
 
 }
+.show_info{
+    position:absolute;
+    left:0;
+    top:102px;
+    display:none;
+}
 .show_info>figure{
     position: relative;
 }

@@ -1,0 +1,304 @@
+@charset "utf-8";
+#carinfo{
+    width:100%;
+    height:540px;
+    min-height:540px;
+    background:#fff;
+    height:auto!important;
+}
+.carinfo_con{
+    width:1280px;
+    margin:0 auto;
+    height:auto!important;
+}
+.status{
+    margin-top:80px;
+    position: relative;
+    width:320px;
+    float:left;
+}
+.status_line{
+    width:320px;
+    height:4px;
+    background:#ccc;
+    position:absolute;
+    left:0;
+    top:50%;
+    margin-top:-2px;
+}
+.circle{
+    width:36px;
+    height:36px;
+    background:#ccc;
+    border-radius:50%;
+    color:#fff;
+    font-size:12px;
+    line-height:36px;
+    text-align:center;
+    font-weight: bold;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-top:-18px;
+    margin-left:-18px;
+}
+.status>a{
+    color:#ccc;
+    line-height:70px;
+    position:absolute;
+    left:0;
+    top:0;
+    width:320px;
+    height:70px;
+    text-align:center;
+}
+.at_status{
+    background:#1428a0;
+}
+.at_status_a{
+    color:#1428a0!important;
+    font-weight: bold;
+}
+
+.nogoods{
+    width:100%;
+    height:390px;
+    padding-top:50px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.tub{
+    width:110px;
+    height:110px;
+    background:#ccc;
+    border-radius:50%;
+    text-align:center;
+    line-height:110px;
+    color:#fff;
+}
+.tub>i{
+    font-size:50px;
+}
+.nogoods>p{
+    font-size:24px;
+    color:#333;
+    line-height:65px;
+    height:65px;
+    text-align:center;
+    margin-top:20px;
+}
+.nogoods>a{
+    width:270px;
+    height:50px;
+    background:#1428a0;
+    color:#fff;
+    line-height:50px;
+    text-align:center;
+    font-weight: bold;
+    margin-top:20px;
+}
+
+/* 表格 */
+.havegoods table{
+    border-spacing:0;
+}
+.havegoods th:first-child{
+    position: relative;
+    width:100px!important;
+    text-align:right!important;
+}
+.havegoods th{
+    text-align:left;
+    background:#f2f2f2;
+    height:50px;
+    width:320px;
+    font-size:14px;
+    font-weight: normal;
+    color:#333;
+}
+/* 勾选框 */
+.remb .rebtn{
+    width:18px;
+    height:18px;
+    border-radius:4px;
+    display:inline-block;
+    border:1px solid #bdc3c9;
+    margin-right:8px;
+    position:absolute;
+    top:50%;
+    margin-top:-9px;
+    left:20px;
+}
+.check{
+    display:none;
+}
+.rebtn .checkphto{
+    display:none;
+}
+/* 去掉number上下箭头 */
+input::-webkit-outer-spin-button,   
+input::-webkit-inner-spin-button{               
+    -webkit-appearance: none !important; 
+}
+.amount{
+    position: relative;
+    min-height:80px;
+    padding:20px 0;
+}
+.amount>input{
+    width:50px;
+    border:1px solid #ccc;
+    height:25px;
+    text-align:center;
+    float:left;
+}
+.amount>div{
+    cursor:pointer;
+    text-align:center;
+    line-height:25px;
+    font-size:20px;
+    color:#333;
+    font-weight: bold;
+    width:20px;
+    height:25px;
+    border:1px solid #ccc;
+    float:left;
+}
+.amount>span{
+    display:block;
+    position: absolute;
+    top:60px;
+    margin-left:30px;
+}
+.havegoods form{
+    border-bottom:1px solid #ccc;
+}
+.havegoods .total{
+    height:105px;
+    font-size:12px;
+    color:#333;
+}
+.total>span{
+    line-height:105px;
+    float:left;
+}
+.total>ul{
+    height:105px;
+    float:right;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.total>ul>li{
+    width:165px;
+    height:25px;
+    line-height:25px;
+}
+.total>ul>li>span{
+    float:left;
+}
+.total>ul>li>i{
+    font-size:20px;
+    color:#1428a0;
+    float:right;
+}
+.pay{
+    height:50px;
+    background:#f2f2f2;
+    line-height:50px;
+    margin-bottom:70px;
+}
+.pay>div:first-child{
+    cursor:pointer;
+    position: relative;
+    float:left;
+    width:90px;
+    color:#1428a0;
+    padding-left:30px;
+}
+.pay>div:first-child:hover{
+    color:#1478a0;
+}
+.pay .paybtn{
+    float:right;
+    width:270px;
+    height:50px;
+    line-height:50px;
+    font-weight: bold;
+    color:#fff;
+    background:#1428a0;
+    text-align:center;
+    cursor:pointer;
+}
+.phtl_box{
+    background:#f2f2f2;
+    border:none;
+}
+.phtl_btn{
+    border-color:transparent #1428a0 transparent transparent;
+}
+.phtl_btn:after{
+    border-color:transparent #f2f2f2 transparent transparent;
+}
+.phtl_box:hover{
+    background:#f2f2f2;
+    border:none;
+}
+.phtl_box:hover .phtl_btn:after{
+    border-color:transparent #f2f2f2 transparent transparent;
+}
+.phtl_box:hover .phtl_btn{
+    border-color:transparent #1428a0 transparent transparent;
+}
+/* 可能喜欢 */
+.like{
+    height:auto!important;
+    background:#fff;
+    height:435px;
+    min-height:435px;
+}
+.like>p{
+    height:70px;
+    line-height:70px;
+    font-size:22px;
+    color:#333;
+    text-align:center;
+}
+.like>div{
+    height:auto!important;
+    height:440px;
+    min-height:440px;
+}
+.like>div>figure{
+    position: relative;
+    border:none;
+    height:390px;
+    width:240px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+/* 解决高度塌陷 */
+.like>div>.clearfloat{
+    clear:both;
+}
+.like>div>figure>img{
+    /* position: absolute; */
+    /* left:50%; */
+    margin-left:-237px;
+}
+.like>div>figure>span{
+    height:30px;
+    line-height:30px;
+}
+.like .addin{
+    width:180px;
+    height:30px;
+    background:#1428a0;
+    color:#fff;
+    line-height:30px;
+    text-align:center;
+}

@@ -219,6 +219,7 @@ var changeimg=(function(){
                         var src=this.src;
                         srcbox.push(src);
                         var num=src.replace(/[^0-9]/ig,"");
+                        num=num.replace("7777","");
                         src=src.split("");
                         var index=src.indexOf(num);
                         for(var i=0;i<srchz.length;i++){
