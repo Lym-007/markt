@@ -136,7 +136,21 @@ body>div{
     font-weight:bold;
     position:relative;
 }
-.ltxt li:hover a,.rtxt li:hover a{
+.li_hover_a{
+    font-weight:bolder!important;
+    color:#1428a0!important;
+    text-decoration:none!important;
+}
+.li_hover_i{
+    font-weight:bolder!important;
+    color:#1428a0!important;
+}
+.li_hover_li{
+    font-weight:bolder;
+    color:#1428a0;
+    border-bottom:2px solid #1429a0;
+}
+/* .ltxt li:hover a,.rtxt li:hover a{
     font-weight:bolder;
     color:#1428a0;
     text-decoration:none;
@@ -149,7 +163,7 @@ body>div{
     font-weight:bolder;
     color:#1428a0;
     border-bottom:2px solid #1429a0;
-}
+} */
 
 .info{
     width:1349px;
@@ -571,8 +585,7 @@ html body .tag_active{
 .show_info{
     position:absolute;
     left:0;
-    top:102px;
-    display:none;
+    top:65px;
 }
 .show_info>figure{
     position: relative;

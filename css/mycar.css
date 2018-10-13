@@ -104,16 +104,11 @@
 .havegoods table{
     border-spacing:0;
 }
-.havegoods th:first-child{
-    position: relative;
-    width:100px!important;
-    text-align:right!important;
-}
 .havegoods th{
     text-align:left;
     background:#f2f2f2;
     height:50px;
-    width:320px;
+    width:235px;
     font-size:14px;
     font-weight: normal;
     color:#333;
@@ -136,6 +131,18 @@
 }
 .rebtn .checkphto{
     display:none;
+}
+.havegoods th:first-child{
+    position: relative;
+    padding-right:10px;
+    width:80px;
+    text-align:right;
+}
+.havegoods tr td:first-child{
+    position: relative;
+    padding-right:10px;
+    width:80px;
+    text-align:right;
 }
 /* 去掉number上下箭头 */
 input::-webkit-outer-spin-button,   

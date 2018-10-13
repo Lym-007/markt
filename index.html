@@ -179,7 +179,32 @@
                                     <li><a href="mycar.html"><i class="iconfont icon-Shapecopy"></i></a></li>
                                 </ul>
                             </div>
-                        </div>
+                            <div class="show_info info">
+                                    <div>
+                                        <figure>
+                                            <img src="imgs/index/note.jpg" alt="loading">
+                                            <figcaption>盖乐世 Note9</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="imgs/index/s9.jpg" alt="loading">
+                                            <figcaption>盖乐世 S9+ </figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="imgs/index/s8.jpg" alt="loading">
+                                            <figcaption>盖乐世 S8 Star</figcaption>
+                                        </figure>
+                                        <figure class="lastinfo">
+                                            <img src="imgs/index/a9.jpg" alt="loading">
+                                            <figcaption>盖乐世 A9 Star</figcaption>
+                                        </figure>
+                                    </div>
+                                    <p>盖乐世S系列</p>
+                                    <p>盖乐世Note系列</p>
+                                    <p>盖乐世A系列</p>
+                                    <p>盖乐世C系列</p>
+                                </div>
+                            </div>
+                         </div>
                     </div>
                 </div>
    </header>
@@ -562,31 +587,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="show_info info">
-                        <div>
-                            <figure>
-                                <img src="imgs/index/note.jpg" alt="loading">
-                                <figcaption>盖乐世 Note9</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="imgs/index/s9.jpg" alt="loading">
-                                <figcaption>盖乐世 S9+ </figcaption>
-                            </figure>
-                            <figure>
-                                <img src="imgs/index/s8.jpg" alt="loading">
-                                <figcaption>盖乐世 S8 Star</figcaption>
-                            </figure>
-                            <figure class="lastinfo">
-                                <img src="imgs/index/a9.jpg" alt="loading">
-                                <figcaption>盖乐世 A9 Star</figcaption>
-                            </figure>
-                        </div>
-                        <p>盖乐世S系列</p>
-                        <p>盖乐世Note系列</p>
-                        <p>盖乐世A系列</p>
-                        <p>盖乐世C系列</p>
-                    </div>
-                </div>
    </footer>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
@@ -599,8 +599,7 @@
     <script src="js/comm.js"></script>
     <script>
         
-    // List位置初始化，Info位置初识化
-                     $(".show_info").css("top", "102px");
+    // List位置初始化
                     var _list = document.querySelectorAll(".list");
                     i=0;
                     $(_list[i]).css("margin-left", -parseInt(_list[i].offsetWidth / 2) + "px");
