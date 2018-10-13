@@ -129,7 +129,11 @@ var start=(function(){
                 _max.style.display='none';
                 _this.setwh(_move,200);
                 _this.setwh(_maxig,1625);
-            }
+            };
+            $(".info_top li").click(function(){
+                $(".info_top li").removeClass("checkedli");
+                $(this).addClass("checkedli");
+            })
         },
         showimage:function(index){
             for(i=0;i<_checkli.length;i++){
