@@ -152,6 +152,19 @@
     width:80px;
     text-align:right;
 }
+.first_info{
+    display:none;
+}
+.del:hover{
+    color:#f50d0d;
+    text-decoration: underline;
+}
+.del{
+    cursor: pointer;
+}
+.down:hover,.up:hover{
+    background:#1478a0;
+}
 /* 商品 */
 .commodity_td{
     width:356px;
@@ -310,9 +323,10 @@ input::-webkit-inner-spin-button{
     text-align:center;
 }
 .like>div{
-    height:440px;
-    min-height:440px;
-    height:auto!important;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
 }
 .like>div>div{
     position: relative;
@@ -356,6 +370,7 @@ input::-webkit-inner-spin-button{
     background:#1478a0;
 }
 .paymethod{
+    margin-top:100px;
     border-top:1px solid #aaa;
     display:flex;
 }

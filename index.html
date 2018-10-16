@@ -309,16 +309,16 @@
    <footer></footer>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
-             $("header").load("head.html #header_con");
-                $("footer").load("bottom.html #footer_con", { limit: 20 }, function () {
-                    jQuery.getScript("js/comm.js", function () {
-                        navover.init();
-                        mouseScroll.init();
-                        // 点击跳转事件
-                        click_down.init();
+                       $("header").load("head.html #header_con");
+                        $("footer").load("bottom.html #footer_con", { limit: 20 }, function () {
+                            jQuery.getScript("js/comm.js", function () {
+                                navover.init();
+                                mouseScroll.init();
+                                // 点击跳转事件
+                                click_down.init();
 
-                    });
-                });
+                            });
+                        });
     </script>
     <script src="js/index.js"></script>
     <script src="js/swiper.js"></script>

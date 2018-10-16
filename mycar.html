@@ -87,8 +87,8 @@
                                         <p>盖乐世Note9 红色</p>
                                     </div>
                                 </td>
-                                <td> ￥4999.00 </td>
-                                <td> 4999.00 </td>
+                                <td class="commodity_price"> ￥4999.00 </td>
+                                <td class="commodity_jifen"> 4999.00 </td>
                                 <td>
                                     <div class="amount">
                                         <div class="down">-</div>
@@ -97,7 +97,7 @@
                                         <span class="del">删除</span>
                                     </div>
                                 </td>
-                                <td class="nocheck"> ￥4999.00 </td>
+                                <td class="last_price nocheck"> ￥4999.00 </td>
                             </tr>
                             <tr class="car_column">
                                 <td>
@@ -251,26 +251,37 @@
     </article>
     <footer></footer>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script>
-        $("header").load("head.html #header_con");
-        $("footer").load("bottom1.html #footer_con", { limit: 20 }, function () {
-            jQuery.getScript("js/comm.js", function () {
-                navover.init();
-                mouseScroll.init();
-                // 点击跳转事件
-                click_down.init();
-
-            });
-        });
-    </script>
     <script src="js/swiper.js"></script>
     <!-- <script src="js/comm.js"></script> -->
     <script src="js/mycar.js"></script>
     <script>
-        //表单操作事件
-        form_function.init();
-        // 添加到购物车事件
-        add_goods.init();
+            // 定义本地缓存
+            // localStorage.car_info="[]";
+            window.onload=function(){
+                            $("header").load("head.html #header_con");
+                            $("footer").load("bottom1.html #footer_con", { limit: 20 }, function () {
+                            jQuery.getScript("js/comm.js", function () {
+                                navover.init();
+                                mouseScroll.init();
+                                // 点击跳转事件
+                                click_down.init();
+                
+                            });
+                            }); 
+                        console.log(localStorage.car_info);
+                    
+                            var firsttr=$(".goods_form>table").children(0).children(0)[0].cloneNode(true);
+                            load_car.init($(".car_column")[0],$(".goods_form>table"),JSON.parse(localStorage.car_info),firsttr);
+                            //表单操作事件
+                            form_function.init();
+                            // 添加到购物车事件
+                            add_goods.init(firsttr);
+            }
+           
+        </script>
+    <script>
+      
+        
     </script>
 </body>
 

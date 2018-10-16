@@ -61,25 +61,27 @@ var start=(function(){
                 _min.onmousemove=function(e){
                     e=e||window.event;
                      //获取边界
-                var maxX=_min.clientWidth-_move.offsetWidth-20;
-                var maxY=_min.clientHeight-_move.offsetHeight-20;
+                var maxX=_min.clientWidth-_move.offsetWidth;
+                var maxY=_min.clientHeight-_move.offsetHeight;
                     //计算位置
                     var x= e.clientX-this.offsetLeft-_move.offsetWidth/2;
                     var y= e.clientY-this.offsetTop-_move.offsetHeight/2;
                     //边界处理
                   
-                    if(x<=20){
-                        x=20;
+                    if(x<=(_move.offsetWidth/2)+10){
+                        x=(_move.offsetWidth/2)+10;
                     }
-                    else if(x>=maxX){
-                        x=maxX;
+                    else if(x>=maxX+(_move.offsetWidth/2)-10){
+                        x=maxX+(_move.offsetWidth/2)-10;
                     }
-                    if(y<=20){
-                        y=20;
+                    if(y<=_move.offsetHeight/2+10){
+                        y=_move.offsetHeight/2+10;
                     }
-                    else if(y>=maxY){
-                        y=maxY;
+                    else if(y>=maxY+(_move.offsetHeight/2)+10){
+                        y=maxY+(_move.offsetHeight/2)+10;
                     }
+                    y-=(_move.offsetHeight/2);
+                    x-=(_move.offsetWidth/2);
                     // y+=(_move.offsetHeight/2);
                     var _x=_maxig.offsetWidth/2;
                     var _y=_maxig.offsetHeight/2;
@@ -158,6 +160,35 @@ var start=(function(){
             ele.style.height=wh+"px";
             ele.style.marginTop=-wh/2+"px";
             ele.style.marginLeft=-wh/2+"px";
+        }
+    }
+}());
+
+var addToCar=(function(){
+    var $addbtn=$(".addto");
+    return {
+        init:function(){
+            this.event();
+        },
+        event:function(){
+            $addbtn.click(function(){
+                var arr=JSON.parse(localStorage.car_info);
+                
+                var src=$(".minbox .firstimg").children("img")[0].src;
+                var p=$(".sinfo_r h1").html()+$(".colorchecked span").html();
+                var price=$(".price .number").html();
+                var jifen=price.replace("￥","");
+                var info={
+                    src:src,
+                    p:p,
+                    price:price,
+                    jifen:jifen,
+                    allprice:price
+                }
+                arr.push(info);
+                localStorage.car_info=JSON.stringify(arr);
+                alert("加入成功")
+            });
         }
     }
 }());
