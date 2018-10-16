@@ -74,7 +74,7 @@
                                     <div class="price_txt">
                                         <span class="pricetit">价格</span>
                                         <span class="cs">红色</span>
-                                        <span class="number">￥2399,99</span>
+                                        <span class="number">￥2399.99</span>
                                     </div>
                                     <span class="line"></span>
                                     <ul class="otherinfo">
@@ -269,6 +269,7 @@
         <footer>  </footer>
                 <script src="js/jquery-3.3.1.min.js"></script> 
                 <script>
+                    
                         $("header").load("head.html #header_con");
                         $("footer").load("bottom.html #footer_con", { limit: 20 }, function () {
                             jQuery.getScript("js/comm.js", function () {
@@ -284,7 +285,7 @@
                 <script src="js/swiper.js"></script>
                 <script src="js/info.js"></script>
                 <script>
-
+                     getinfo.init();
                 //   缩略图及左右控制
                     minphto();
                     

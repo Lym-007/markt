@@ -1,3 +1,18 @@
+// 获取商品信息
+var getinfo=(function(){
+    return {
+        init:function(){
+            var arr=JSON.parse(localStorage.x_info);
+            var src=arr[0].src||"imgs/info/sb1d.jpg";
+            var p=arr[0].p||"Calaxy watch 蓝牙智能手表";
+            var price=arr[0].price||"￥2399.99";
+            $(".sinfo_r").children("h1").html(p);
+            $(".min").children("img")[0].src=src;
+            $(".max").children("img")[0].src=src;
+            console.log(p,$(".sinfo_r").children("h1")[0])
+        }
+    }
+}());
 // 缩略图及左右控制
 function minphto(){
     var $movebox=$(".minbox");

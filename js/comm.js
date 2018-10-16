@@ -4,23 +4,44 @@ var click_down=(function(){
     var _show_info=document.querySelector(".show_info");
     return {
         init:function(){
+            this.disable($("figure"));
+            console.log($(".show_info figure")[0])
+            this.disable($(".show_info figure"));
             this.event();
+            
         },
         event:function(){
-            _show_info.onmousedown=function(e){
+            _show_info.addEventListener("mousedown",function(e){
                 e=e||window.event;
+                e.stopPropagation();
                 var target=e.target||e.srcElement;
-                location.href="info.html";
+                // location.href="info.html";
                 console.log(target)
-            }
+            },true);
             $("figure").click(function(){
-                console.log(this)
+                $("figure").children()[0].disabled=true;
+                var arr=[];
+                var src=$(this).children("img")[0].src;
+                var p=$(this).children("figcaption").html();
+                var price=$(this).children("span").html();
+                var info={
+                    src:src,
+                    p:p,
+                    price:price
+                };
+                arr.push(info);
+                console.log(arr);
+                 localStorage.x_info=JSON.stringify(arr);
                 location.href="info.html";
             })
             $(".downimg").click(function(){
                 console.log(this)
-                location.href="info.html";
+                // location.href="info.html";
             })
+        },
+        disable:function(ele){
+            ele.children("img")[0].disabled=true;
+            ele.children("figcaption")[0].disabled=true;
         }
     }
 }());
