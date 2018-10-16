@@ -138,17 +138,17 @@ body>div{
 }
 .li_hover_a{
     font-weight:bolder!important;
-    color:#1428a0!important;
+    color:#072bf7!important;
     text-decoration:none!important;
 }
 .li_hover_i{
     font-weight:bolder!important;
-    color:#1428a0!important;
+    color:#072bf7!important;
 }
 .li_hover_li{
     font-weight:bolder;
-    color:#1428a0;
-    border-bottom:2px solid #1429a0;
+    color:#072bf7;
+    border-bottom:2px solid #072bf7;
 }
 /* .ltxt li:hover a,.rtxt li:hover a{
     font-weight:bolder;
@@ -164,7 +164,9 @@ body>div{
     color:#1428a0;
     border-bottom:2px solid #1429a0;
 } */
-
+.rtxt li:hover a,.rtxt li:hover i{
+    color:#072bf7;
+}
 .info{
     width:1349px;
     position:fixed;
@@ -359,6 +361,7 @@ body>div{
 
 /* 公共全局样式 */
 figure{
+    cursor:pointer;
     float:left;
     width:295px;
     height:341px;
@@ -379,6 +382,7 @@ figure>img{
     width:217px;
     height:217px;
 }
+
 /* 导航圆点 */
 .list{
     position:absolute;
@@ -391,17 +395,17 @@ figure>img{
     margin-left:10px;
     margin-right:10px;
     top:0;
-    margin-top:-8px;
+    margin-top:-9px;
     cursor:pointer;
     float:left;
-    width:16px;
-    height:16px;
+    width:18px;
+    height:18px;
     border-radius:50%;
     background:#d4d5da;
 }
 body .active{
-    width:20px;
-    height:20px;
+    width:18px;
+    height:18px;
     margin-top:-10px;
     background:#4050b0;
     border:2px solid #fff;
@@ -419,11 +423,13 @@ body .active{
     outline:none;
 }
 html body .tag_active{
-    color:#1428a0;
+    color:#1428a0!important;
     font-weight: bold;
     border-bottom:2px solid #1428a0;
 }
-
+body img{
+    cursor:pointer;
+}
 
 /* 左右按钮 */
 .phtl_box{
@@ -586,6 +592,19 @@ html body .tag_active{
     position:absolute;
     left:0;
     top:65px;
+}
+.info .lastinfo{
+    padding-right:70px!important;
+    border-right:1px solid #aaa!important;
+}
+.info p{
+    cursor:pointer;
+}
+.info p:hover{
+    color:#072bf7;
+}
+.info figure:hover{
+    color:#072bf7;
 }
 .show_info>figure{
     position: relative;

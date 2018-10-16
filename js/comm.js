@@ -1,11 +1,32 @@
 
-$("figure").click(function(){
-    location.href="info.html";
-})
+// 点击跳转详情页事件
+var click_down=(function(){
+    var _show_info=document.querySelector(".show_info");
+    return {
+        init:function(){
+            this.event();
+        },
+        event:function(){
+            _show_info.onmousedown=function(e){
+                e=e||window.event;
+                var target=e.target||e.srcElement;
+                location.href="info.html";
+                console.log(target)
+            }
+            $("figure").click(function(){
+                console.log(this)
+                location.href="info.html";
+            })
+            $(".downimg").click(function(){
+                console.log(this)
+                location.href="info.html";
+            })
+        }
+    }
+}());
 //nav下拉列表事件
 var navover=(function(){
     var lul=document.querySelector(".ltxt");
-    console.log(lul)
     var _llibox=lul.children;
     var _info=document.querySelector(".show_info");
     return {

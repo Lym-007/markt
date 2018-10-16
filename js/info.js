@@ -145,6 +145,7 @@ var start=(function(){
             _checkli[index].className='checked';
             var src=_checkli[index].firstElementChild.src;
             var num=src.replace(/[^0-9]/ig,"");
+            num=num.replace("7777","");
             var index=src.split("").indexOf(num)+1;
             src=src.split("");
             src.splice(index,1,"d");
