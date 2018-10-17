@@ -228,7 +228,7 @@ var addToCar=(function(){
                 arr.push(info);
                 localStorage.car_info=JSON.stringify(arr);
                 alert("加入成功");
-                location.href="mycar.html";
+                window.open("mycar.html");
             });
         }
     }

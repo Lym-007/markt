@@ -25,7 +25,6 @@ var form_function=(function(){
             })
               // 单个选择事件
             $(".check").click(function(){
-                console.log("check")
                 // 找出当前点击的商品的价格td
                 var $td=$(this).parent().parent().parent().children().eq(-1);
                 if(this.checked==true){
@@ -179,7 +178,10 @@ var load_car=(function(){
             }
             // $(frag).children(0).addClass("first_info");
             table.html(frag);
-            $(table.children()[1]).css("display","none");
+            // 默认选中第一个并隐藏，防止后面全选时落下
+             $(table.children()[1]).children().children().children(".check").click();
+                $(table.children()[1]).css("display","none");
+           
             this.event();
         },
         event:function(){

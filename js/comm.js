@@ -67,7 +67,7 @@ var click_down=(function(){
                 arr.push(info);
                  localStorage.x_info=JSON.stringify(arr);
             }
-            location.href="info.html";
+            window.open("info.html");
        }
     }
 }());
