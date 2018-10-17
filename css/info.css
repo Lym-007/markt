@@ -157,6 +157,7 @@
 }
 .colorbox{
     position: relative;
+    cursor:pointer;
     width:120px;
     height:40px;
     border:1px solid #ddd;

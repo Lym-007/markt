@@ -152,6 +152,8 @@ var add_goods=(function(){
                 
              load_car.init($(".car_column")[0],$(".goods_form>table"),JSON.parse(localStorage.car_info),_this.firsttr);
             alert("加入购物车成功")
+            location.reload();
+            $(".gotop")[0].click();
             })
         },
     }
@@ -177,9 +179,11 @@ var load_car=(function(){
             }
             // $(frag).children(0).addClass("first_info");
             table.html(frag);
+            $(table.children()[1]).css("display","none");
             this.event();
         },
         event:function(){
+            var _this=this;
             $(".del").click(function(){
                var id= $(this).parent().parent().parent()[0].index;
                var arr=JSON.parse(localStorage.car_info);
@@ -188,8 +192,20 @@ var load_car=(function(){
                  arr.splice(id,1);
                  localStorage.car_info=JSON.stringify(arr);
                  load_car.init($(".car_column")[0],$(".goods_form>table"),JSON.parse(localStorage.car_info),tr);
-                 alert("删除成功")
+                 alert("删除成功");
+                 location.reload();
+                 $(".gotop")[0].click();
             })
+        },
+        show_car:function(){
+            if(localStorage.car_info.length>2){
+                $(".nogoods").css("display","none");
+                $(".havegoods").css("display","block");
+            }
+            else{
+                $(".nogoods").css("display","flex");
+                $(".havegoods").css("display","none");
+            }
         }
     }
 }());

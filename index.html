@@ -162,38 +162,40 @@
                 <div class="product">
                     <p class="hot">本周热销</p>
                     <div class="goods">
-                        <figure class="sp">
-                            <img src="imgs/index/sj1.jpg" alt="l">
-                            <figcaption>盖乐世</figcaption>
-                            <span>￥999.00</span>
-                            <div class="s_label">
-                                <span>买赠</span>
+                        <div>
+                                <figure class="sp">
+                                    <img src="imgs/index/sjhd1.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                    <div class="s_label">
+                                        <span>买赠</span>
+                                    </div>
+                                </figure>
+                                <figure class="sp">
+                                    <img src="imgs/index/sjhd2.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                    <div class="s_label xinp">
+                                        <span>新品</span>
+                                    </div>
+                                </figure>
+                                <figure class="sp">
+                                    <img src="imgs/index/sjhd3.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                    <div class="s_label zhij">
+                                        <span>直降</span>
+                                    </div>
+                                </figure>
+                                <figure class="sp">
+                                    <img src="imgs/index/sjhd4.jpg" alt="l">
+                                    <figcaption>盖乐世</figcaption>
+                                    <span>￥999.00</span>
+                                    <div class="s_label mianx">
+                                        <span>免息</span>
+                                    </div>
+                                </figure>
                             </div>
-                        </figure>
-                        <figure class="sp">
-                            <img src="imgs/index/sj2.jpg" alt="l">
-                            <figcaption>盖乐世</figcaption>
-                            <span>￥999.00</span>
-                            <div class="s_label xinp">
-                                <span>新品</span>
-                            </div>
-                        </figure>
-                        <figure class="sp">
-                            <img src="imgs/index/sj3.jpg" alt="l">
-                            <figcaption>盖乐世</figcaption>
-                            <span>￥999.00</span>
-                            <div class="s_label zhij">
-                                <span>直降</span>
-                            </div>
-                        </figure>
-                        <figure class="sp">
-                            <img src="imgs/index/sj4.jpg" alt="l">
-                            <figcaption>盖乐世</figcaption>
-                            <span>￥999.00</span>
-                            <div class="s_label mianx">
-                                <span>免息</span>
-                            </div>
-                        </figure>
                     </div>
                 </div>
             </div>
@@ -212,9 +214,9 @@
                 <div class="product">
                     <p class="hot">为您推荐</p>
                     <ul class="goods_nav tuitag">
-                        <!-- <li class="_tag">智能手机</li>
+                        <li class="_tag">智能手机</li>
                         <li class="_tag">可穿戴设备</li>
-                        <li class="_tag">电池/充电器</li> -->
+                        <li class="_tag">电池/充电器</li>
                     </ul>
                     <div class="my-container">
                         <div class="swiper-wrapper">
@@ -309,8 +311,7 @@
    <footer></footer>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
-                       $("header").load("head.html #header_con");
-                        $("footer").load("bottom.html #footer_con", { limit: 20 }, function () {
+                       $("header").load("head.html #header_con", { limit: 200 }, function () {
                             jQuery.getScript("js/comm.js", function () {
                                 navover.init();
                                 mouseScroll.init();
@@ -319,10 +320,11 @@
 
                             });
                         });
+                        $("footer").load("bottom.html #footer_con");
     </script>
     <script src="js/index.js"></script>
     <script src="js/swiper.js"></script>
-    <script src="js/comm.js"></script>
+    <!-- <script src="js/comm.js"></script> -->
     <script>
         
     // List位置初始化

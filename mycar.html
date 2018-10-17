@@ -269,7 +269,7 @@
                             });
                             }); 
                         console.log(localStorage.car_info);
-                    
+                        load_car.show_car();
                             var firsttr=$(".goods_form>table").children(0).children(0)[0].cloneNode(true);
                             load_car.init($(".car_column")[0],$(".goods_form>table"),JSON.parse(localStorage.car_info),firsttr);
                             //表单操作事件

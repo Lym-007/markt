@@ -4,45 +4,71 @@ var click_down=(function(){
     var _show_info=document.querySelector(".show_info");
     return {
         init:function(){
-            this.disable($("figure"));
-            console.log($(".show_info figure")[0])
-            this.disable($(".show_info figure"));
             this.event();
-            
         },
         event:function(){
+            var _this=this;
             _show_info.addEventListener("mousedown",function(e){
                 e=e||window.event;
                 e.stopPropagation();
                 var target=e.target||e.srcElement;
-                // location.href="info.html";
-                console.log(target)
+                _this.setinfo(target);
             },true);
             $("figure").click(function(){
-                $("figure").children()[0].disabled=true;
-                var arr=[];
-                var src=$(this).children("img")[0].src;
-                var p=$(this).children("figcaption").html();
-                var price=$(this).children("span").html();
-                var info={
-                    src:src,
-                    p:p,
-                    price:price
-                };
-                arr.push(info);
-                console.log(arr);
-                 localStorage.x_info=JSON.stringify(arr);
-                location.href="info.html";
+                _this.setinfo(this);
             })
             $(".downimg").click(function(){
                 console.log(this)
                 // location.href="info.html";
             })
         },
-        disable:function(ele){
-            ele.children("img")[0].disabled=true;
-            ele.children("figcaption")[0].disabled=true;
-        }
+       setinfo:function(ele){
+            if(ele.nodeName==="FIGURE"){
+                var arr=[];
+                var t1=$(ele).parent().parent().prev("p").html();
+                var t2=$(ele).parent().parent().prev("ul").children(".tag_active").html();
+                var src=$(ele).children("img")[0].src;
+                var p=$(ele).children("figcaption").html();
+                var price=$(ele).children("span").html();
+                var info={
+                    title:"网上长城 > "+t1+" > "+t2,
+                    src:src,
+                    p:p,
+                    price:price
+                };
+                arr.push(info);
+                console.log(arr)
+                 localStorage.x_info=JSON.stringify(arr);
+          
+            }
+            if(ele.nodeName==="IMG"){
+                var arr=[];
+                var src=$(ele)[0].src;
+                var p=$(ele).next().html();
+                var price=$(ele).next().next().html();
+                var info={
+                    src:src,
+                    p:p,
+                    price:price
+                };
+                arr.push(info);
+                 localStorage.x_info=JSON.stringify(arr);
+            }
+            if(ele.nodeName==="FIGCAPTION"){
+                var arr=[];
+                var src=$(ele).prev()[0].src;
+                var p=$(ele).html();
+                var price=$(ele).next().html();
+                var info={
+                    src:src,
+                    p:p,
+                    price:price
+                };
+                arr.push(info);
+                 localStorage.x_info=JSON.stringify(arr);
+            }
+            location.href="info.html";
+       }
     }
 }());
 //nav下拉列表事件

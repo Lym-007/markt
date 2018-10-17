@@ -215,16 +215,17 @@ var changeimg=(function(){
             for(var j=0;j<this.ele.length;j++){
                 this.ele[j].firstElementChild.onmouseenter=function(){
                         var srcbox=[];
-                        var srchz=["c","d","b"];
+                        var srchz=["d","z","y","s","x"];
                         var src=this.src;
                         srcbox.push(src);
                         var num=src.replace(/[^0-9]/ig,"");
                         num=num.replace("7777","");
+                        console.log(num,src)
                         src=src.split("");
-                        var index=src.indexOf(num);
+                        var index=src.indexOf(num)-1;
                         for(var i=0;i<srchz.length;i++){
                             var newsrc=srcbox[0].split("");
-                            newsrc.splice(index,0,srchz[i]);
+                            newsrc.splice(index,1,srchz[i]);
                             srcbox.push(newsrc.join(""));
                         }
                         srcBox=srcbox;

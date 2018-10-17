@@ -3,13 +3,37 @@ var getinfo=(function(){
     return {
         init:function(){
             var arr=JSON.parse(localStorage.x_info);
-            var src=arr[0].src||"imgs/info/sb1d.jpg";
-            var p=arr[0].p||"Calaxy watch 蓝牙智能手表";
-            var price=arr[0].price||"￥2399.99";
-            $(".sinfo_r").children("h1").html(p);
+            var src=arr[0].src;
+            var p=arr[0].p;
+            var price=arr[0].price;
+            $(".sinfo_r").children("h1").html(p.split(">")[0]);
+            $(".price_txt").children(".number").html(price);
+            this.setSrc(src);
+            p=p.split(">")[0];
+            if(arr[0].p.indexOf($(".colorchecked").children("span").html())<=-1)
+                arr[0].p=p+">"+ $(".colorchecked").children("span").html();
+            localStorage.x_info=JSON.stringify(arr);
+            console.log(localStorage.x_info);
+        },
+        setSrc:function(src){
+           
             $(".min").children("img")[0].src=src;
             $(".max").children("img")[0].src=src;
-            console.log(p,$(".sinfo_r").children("h1")[0])
+            var $ximg=$(".minbox").children("li").children();
+            for(var i=0;i<$ximg.length;i++){
+                this.changeSrc($ximg[i],src,i);
+            }
+            $(".minbox").children(".checked").children()[0].src=src;
+        },
+        changeSrc:function(ele,src,i){
+            var tag=["d","z","y","s","x"];
+            var num=src.replace(/[^0-9]/ig,"");
+            num=num.replace("7777","");
+            var index=src.split("").indexOf(num)-1;
+            src=src.split("");
+            src.splice(index,1,tag[i]);
+            src=src.join("");
+            ele.src=src;
         }
     }
 }());
@@ -22,7 +46,7 @@ function minphto(){
                 }
                 else{
                     $movebox.animate({
-                        left:'-=135px',
+                        left:'-=136px',
                      });
                 }
                 
@@ -34,13 +58,14 @@ function minphto(){
                     }
                     else{
                         $movebox.animate({
-                            left:'+=135px',
+                            left:'+=136px',
                          });
                     }
                 
         
     });
 }
+// 放大镜
 var start=(function(){
     //获取元素
     var _minig=document.querySelector('.minig');
@@ -161,12 +186,12 @@ var start=(function(){
          }
             _checkli[index].className='checked';
             var src=_checkli[index].firstElementChild.src;
-            var num=src.replace(/[^0-9]/ig,"");
-            num=num.replace("7777","");
-            var index=src.split("").indexOf(num)+1;
-            src=src.split("");
-            src.splice(index,1,"d");
-            src=src.join("");
+            // var num=src.replace(/[^0-9]/ig,"");
+            // num=num.replace("7777","");
+            // var index=src.split("").indexOf(num)+1;
+            // src=src.split("");
+            // src.splice(index,1,"d");
+            // src=src.join("");
             _minig.setAttribute('src',src);
             _maxig.setAttribute('src',src);
         },
@@ -190,7 +215,7 @@ var addToCar=(function(){
                 var arr=JSON.parse(localStorage.car_info);
                 
                 var src=$(".minbox .firstimg").children("img")[0].src;
-                var p=$(".sinfo_r h1").html()+$(".colorchecked span").html();
+                var p=$(".sinfo_r h1").html()+"  "+$(".colorchecked span").html();
                 var price=$(".price .number").html();
                 var jifen=price.replace("￥","");
                 var info={
@@ -202,8 +227,35 @@ var addToCar=(function(){
                 }
                 arr.push(info);
                 localStorage.car_info=JSON.stringify(arr);
-                alert("加入成功")
+                alert("加入成功");
+                location.href="mycar.html";
             });
+        }
+    }
+}());
+
+var setColor=(function(){
+    return {
+        init:function(){
+            this.event();
+        },
+        event:function(){
+            var _this=this;
+            $(".colorbox").click(function(){
+                _this.delClass(".colorbox");
+                _this.setClass(this);
+                getinfo.init();
+            });
+        },
+        setClass:function(ele){
+            $(ele).addClass("colorchecked");
+            console.log(1)
+        },
+        delClass:function(ele){
+            console.log(2)
+            for(var i=0;i<$(ele).length;i++){
+                $($(ele)[i]).removeClass("colorchecked");
+            }
         }
     }
 }());

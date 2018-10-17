@@ -102,6 +102,12 @@
 }
 
 /* 表格 */
+.havegoods{
+    padding-top:200px;
+}
+.goods_form{
+    padding-top:20px;
+}
 .havegoods table{
     border-spacing:0;
 }
