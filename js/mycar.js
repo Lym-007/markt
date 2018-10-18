@@ -13,9 +13,10 @@ var get_goods=(function(){
             for(var i=0;i<goods_arr.length;i++){
                 var newgoods=this.$like_goods.cloneNode(true);
                 newgoods.index=goods_arr[i].id;
-                $(newgoods).children("span").html=goods_arr[i].price;
+                $(newgoods).children("span").html(goods_arr[i].price);
+                // console.log($(newgoods).children("span")[0])
                 $(newgoods).children("figure").children("img")[0].src=goods_arr[i].src;
-                $(newgoods).children("figure").children("figcaption").html=goods_arr[i].name;
+                $(newgoods).children("figure").children("figcaption").html(goods_arr[i].name);
                 $(frag).append($(newgoods));
             }
             this.$like_box.append(frag);
@@ -40,92 +41,88 @@ var form_function=(function(){
                 }
                 else{
                     $(this).next()[0].value--;
+                    var id=$(this).parent().parent().parent()[0].index;
+                    var arr=JSON.parse(localStorage.car_info);
+                    for(var i=0;i<arr.length;i++){
+                        if(id==arr[i].id){
+                            arr[i].number=$(this).next()[0].value;
+                            arr[i].allprice="￥"+arr[i].number*arr[i].jifen;
+                            break;
+                        }
+                    }
+                    localStorage.car_info=JSON.stringify(arr);
                     _this.setPrice(this,$(this).next()[0].value);
                 }  
                 _this.setAllPrice();    
             })
             $(".up").click(function(){
-         
                 $(this).prev()[0].value++;
+                var id=$(this).parent().parent().parent()[0].index;
+                var arr=JSON.parse(localStorage.car_info);
+                for(var i=0;i<arr.length;i++){
+                    if(id==arr[i].id){
+                        arr[i].number=$(this).prev()[0].value;
+                        arr[i].allprice="￥"+arr[i].number*arr[i].jifen;
+                        break;
+                    }
+                }
+                localStorage.car_info=JSON.stringify(arr);
                 _this.setPrice(this,$(this).prev()[0].value);
             })
-              // 单个选择事件
-            $(".check").click(function(){
-                // 找出当前点击的商品的价格td
-                var $td=$(this).parent().parent().parent().children().eq(-1);
-                if(this.checked==true){
-                    $td.addClass("price");
-                }
-                else{
-                    $td.removeClass("price");
-                }
-                _this.setAllPrice();
-            })
-            // 全选事件
-            $(".checkall").click(function(){
-                for(var i=0;i<$(".check").length;i++){
-                    $(".btn1")[i].click();
-                }
-            })
+            // 选择事件
             $(".rebtn").click(function(){
                 $(this).prev()[0].click();
                 if( $(this).prev()[0].checked==true){
+                    $(this).children(".checkphto").stop();
                     $(this).children(".checkphto").fadeIn();
+                    if($(this)[0]===$(".rebtnall")[0]){
+                        // console.log($(this))
+                        $(".btn1").each(function(){
+                            if($(this).prev()[0].checked==false){
+                                $(this).click();
+                            }
+                        })
+                    }
                 }
                 else{
+                    $(this).children(".checkphto").stop();
                     $(this).children(".checkphto").fadeOut();
+                    if($(this)[0]===$(".rebtnall")[0]){
+                        $(".btn1").each(function(){
+                            if($(this).prev()[0].checked==true){
+                                $(this).click();
+                            }
+                        })
+                    }
                 }
-                
                 var flag=0;
-                for(var i=0;i<$(".check").length;i++){
+                for(var i=1;i<$(".check").length;i++){
                     if($(".check")[i].checked==false){
                         flag=1;
                     }
                 }
-                if(flag==1){
-                    
-                    $(".checkall")[0].checked=false;
+                if(flag){
+                    $(".rebtnall").prev()[0].checked=false;
                     $(".rebtnall").children(".checkphto").stop();
-                    $(".rebtnall").children(".checkphto").fadeOut();
+                     $(".rebtnall").children(".checkphto").fadeOut();
                 }
                 else{
-                    $(".checkall")[0].checked=true;
+                    $(".rebtnall").prev()[0].checked=true;
                     $(".rebtnall").children(".checkphto").stop();
-                    $(".rebtnall").children(".checkphto").fadeIn();
+                     $(".rebtnall").children(".checkphto").fadeIn();
                 }
+                if($(this)[0]!=$(".rebtnall")[0]){
+                    var $td=$(this).parent().parent().parent().children().eq(-1);
+                    if($(this).prev()[0].checked==true){
+                        $td.addClass("price");
+                    }
+                    else{
+                        $td.removeClass("price");
+                    }
+                }
+                // $(".check")[0].checked=true;
                 _this.setAllPrice();
             })
-            $(".rebtnall").click(function(){
-                var flag=0;
-                for(var i=0;i<$(".check").length;i++){
-                    if($(".check")[i].checked==false){
-                        flag=1;
-                    }
-                }
-                if(flag==1){
-                    
-                    $(".checkall")[0].checked=true;
-                    for(var i=0;i<$(".check").length;i++){
-                            $(".check")[i].checked=true;
-                     
-                        }
-                    $(".rebtnall").children(".checkphto").stop();
-                    $(".rebtnall").children(".checkphto").fadeIn();
-                }
-                else{
-                    $(".checkall")[0].checked=false;
-                    for(var i=0;i<$(".check").length;i++){
-                        $(".check")[i].checked=false;
-                 
-                    }
-                    $(".rebtnall").children(".checkphto").stop();
-                    $(".rebtnall").children(".checkphto").fadeOut();
-                }
-                $(".rebtnall").children(".checkphto").stop();
-                $(".checkall")[0].click();
-            })
-            
-
         },
         setPrice:function(ele,number){
             var price=parseFloat($(ele).parent().parent().prev().html())*number;
@@ -147,7 +144,7 @@ var form_function=(function(){
       
     }
 }());
-
+// 加入购物车事件
 var add_goods=(function(){
    
     return {
@@ -161,18 +158,32 @@ var add_goods=(function(){
             var _this=this;
             $(".addin").click(function(){
                 var src=$(this).prev().prev().children("img")[0].src;
+                var id=$(this).parent()[0].index;
                 var p=$(this).prev().prev().children("figcaption").html();
                 var price=$(this).prev().html();
                 var jifen=price.replace("￥","");
                 var info={
+                    id:id,
                     src:src,
                     p:p,
                     price:price,
                     jifen:jifen,
-                    allprice:price
+                    allprice:price,
+                    number:1
                 }
                 var arr_info=JSON.parse(localStorage.car_info);
-                arr_info.push(info)
+                var flag=1;
+                for(var i=0;i<arr_info.length;i++){
+                    if(arr_info[i].id===info.id){
+                        flag=0;
+                        arr_info[i].number++;
+                        arr_info[i].allprice="￥"+arr_info[i].jifen*arr_info[i].number;
+                    }
+                }
+                if(flag){
+                    arr_info.push(info);
+                }
+                
                 localStorage.car_info=JSON.stringify(arr_info);
                 
              load_car.init($(".car_column")[0],$(".goods_form>table"),JSON.parse(localStorage.car_info),_this.firsttr);
@@ -196,10 +207,11 @@ var load_car=(function(){
                 var div=$(newtr).children(".commodity_td").children(".commodity");
                 div.children("img")[0].src=arr[i].src;
                 div.children("p").html(arr[i].p);
+                newtr.index=arr[i].id;
                 $(newtr).children(".commodity_price").html(arr[i].price);
                 $(newtr).children(".commodity_jifen").html(arr[i].jifen);
                 $(newtr).children(".last_price").html(arr[i].allprice);
-                newtr.index=i;
+                $(newtr).children(".number_box").children().children("input")[0].value=arr[i].number;
                 frag.append(newtr);
             }
             // $(frag).children(0).addClass("first_info");
@@ -217,7 +229,12 @@ var load_car=(function(){
                var arr=JSON.parse(localStorage.car_info);
             // var arr=[1,2,3,4]
             //    arr.splice(2,1);//会改变数组本身
-                 arr.splice(id,1);
+            for(var i=0;i<arr.length;i++){
+                if(id==arr[i].id){
+                    break;
+                }
+            }
+                 arr.splice(i,1);
                  localStorage.car_info=JSON.stringify(arr);
                  load_car.init($(".car_column")[0],$(".goods_form>table"),JSON.parse(localStorage.car_info),tr);
                  alert("删除成功");
