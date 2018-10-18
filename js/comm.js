@@ -1,4 +1,12 @@
-
+// 点击跳转购物车事件
+var goto_mycar=(function(){
+    return {
+        init:function(){
+            this.$ele=$(".goto_car");
+            console.log(this.$ele);
+        }
+    }
+}());
 // 点击跳转详情页事件
 var click_down=(function(){
     var _show_info=document.querySelector(".show_info");
