@@ -2,8 +2,25 @@
 var goto_mycar=(function(){
     return {
         init:function(){
-            this.$ele=$(".goto_car");
-            console.log(this.$ele);
+            this.$ele=$(".goto_car")[0];
+
+            this.event();
+        },
+        event:function(){
+            this.$ele.onclick = function() {
+                console.log(1)
+                var params = {
+                    method: 'post',
+                    success: function(data) {
+                        // data = JSON.parse(data);
+                        localStorage.goods=JSON.stringify(data);
+                        console.log( localStorage.goods)
+                        location.href="mycar.html";
+
+                    }
+                }
+                sendAjax('http://localhost:7777/gitproject/markt/php/info.php', params);
+            }
         }
     }
 }());

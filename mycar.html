@@ -151,8 +151,8 @@
                 </div>
                 <div class="like">
                     <p>您可能会喜欢</p>
-                    <div>
-                        <div>
+                    <div class="like_box">
+                        <div class="like_goods">
                             <figure>
                                 <img src="imgs/index/sjhd2.jpg" alt="1">
                                 <figcaption>盖乐世 Note9</figcaption>
@@ -160,7 +160,7 @@
                             <span>￥6999.00</span>
                             <div class="addin">加入购物车</div>
                         </div>
-                        <div>
+                        <!-- <div>
                             <figure>
                                 <img src="imgs/index/sjhd3.jpg" alt="1">
                                 <figcaption>盖乐世 A9</figcaption>
@@ -223,7 +223,7 @@
                             </figure>
                             <span>￥4999.00</span>
                             <div class="addin">加入购物车</div>
-                        </div>
+                        </div> -->
 
                     </div>
                     <!-- 解决高度塌陷 -->
@@ -250,6 +250,7 @@
         </div>
     </article>
     <footer></footer>
+    <script src="js/ajax.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/swiper.js"></script>
     <!-- <script src="js/comm.js"></script> -->
@@ -265,9 +266,14 @@
                                 mouseScroll.init();
                                 // 点击跳转事件
                                 click_down.init();
+                                // 跳转到购物车
+                                 goto_mycar.init();
                 
                             });
                             }); 
+                            
+                            // 渲染数据
+                            get_goods.init();
                         console.log(localStorage.car_info);
                         load_car.show_car();
                             var firsttr=$(".goods_form>table").children(0).children(0)[0].cloneNode(true);

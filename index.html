@@ -310,6 +310,7 @@
     </div>
    <footer></footer>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/ajax.js"></script>
     <script>
                        $("header").load("head.html #header_con", { limit: 200 }, function () {
                             jQuery.getScript("js/comm.js", function () {
@@ -317,6 +318,8 @@
                                 mouseScroll.init();
                                 // 点击跳转事件
                                 click_down.init();
+                                // 跳转到购物车
+                                goto_mycar.init();
 
                             });
                         });
@@ -326,7 +329,6 @@
     <script src="js/swiper.js"></script>
     <!-- <script src="js/comm.js"></script> -->
     <script>
-        
     // List位置初始化
                     var _list = document.querySelectorAll(".list");
                     i=0;

@@ -1,3 +1,29 @@
+
+// 数据渲染
+var get_goods=(function(){
+    return {
+        init:function(){
+            this.$like_box=$(".like_box");
+            this.$like_goods=$(".like_goods")[0];
+            this.create_goods();
+        },
+        create_goods:function(){
+            var goods_arr=JSON.parse(localStorage.goods);
+            var frag=document.createDocumentFragment();
+            for(var i=0;i<goods_arr.length;i++){
+                var newgoods=this.$like_goods.cloneNode(true);
+                newgoods.index=goods_arr[i].id;
+                $(newgoods).children("span").html=goods_arr[i].price;
+                $(newgoods).children("figure").children("img")[0].src=goods_arr[i].src;
+                $(newgoods).children("figure").children("figcaption").html=goods_arr[i].name;
+                $(frag).append($(newgoods));
+            }
+            this.$like_box.append(frag);
+            $(this.$like_box.children(".like_goods")[0]).remove();
+        }
+    }
+}());
+// 表格事件
 var form_function=(function(){
     return {
         init:function(){
