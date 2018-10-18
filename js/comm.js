@@ -7,8 +7,9 @@ var goto_mycar=(function(){
             this.event();
         },
         event:function(){
-            this.$ele.onclick = function() {
-                console.log(1)
+            this.$ele.onclick = function(e) {
+                e=e||window.event;
+                e.stopPropagation();
                 var params = {
                     method: 'post',
                     success: function(data) {
